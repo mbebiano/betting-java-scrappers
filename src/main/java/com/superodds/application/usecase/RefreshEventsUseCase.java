@@ -3,6 +3,7 @@ package com.superodds.application.usecase;
 import com.superodds.domain.model.UnifiedEvent;
 import com.superodds.domain.ports.EventRepository;
 import com.superodds.domain.ports.ScraperGateway;
+import jakarta.annotation.PreDestroy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -14,6 +15,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Use case for refreshing events from all scrapers in parallel.
@@ -33,6 +35,20 @@ public class RefreshEventsUseCase {
         // Create thread pool for parallel execution
         // Using fixed thread pool as virtual threads are only available in Java 21+
         this.executorService = Executors.newFixedThreadPool(Math.max(scrapers.size(), 4));
+    }
+    
+    @PreDestroy
+    public void shutdown() {
+        logger.info("Shutting down executor service");
+        executorService.shutdown();
+        try {
+            if (!executorService.awaitTermination(60, TimeUnit.SECONDS)) {
+                executorService.shutdownNow();
+            }
+        } catch (InterruptedException e) {
+            executorService.shutdownNow();
+            Thread.currentThread().interrupt();
+        }
     }
 
     /**

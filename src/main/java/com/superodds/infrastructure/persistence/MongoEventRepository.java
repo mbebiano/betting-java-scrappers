@@ -24,11 +24,16 @@ import java.util.stream.Collectors;
 public class MongoEventRepository implements EventRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(MongoEventRepository.class);
+    private static final ObjectMapper OBJECT_MAPPER;
+    
+    static {
+        OBJECT_MAPPER = new ObjectMapper();
+        OBJECT_MAPPER.registerModule(new JavaTimeModule());
+    }
 
     private final MongoClient mongoClient;
     private final String databaseName;
     private final String collectionName;
-    private final ObjectMapper objectMapper;
 
     public MongoEventRepository(
             MongoClient mongoClient,
@@ -37,9 +42,6 @@ public class MongoEventRepository implements EventRepository {
         this.mongoClient = mongoClient;
         this.databaseName = databaseName;
         this.collectionName = mongoCollectionName;
-        
-        this.objectMapper = new ObjectMapper();
-        this.objectMapper.registerModule(new JavaTimeModule());
     }
 
     @Override
@@ -328,11 +330,11 @@ public class MongoEventRepository implements EventRepository {
 
     private Document eventToDocument(UnifiedEvent event) {
         @SuppressWarnings("unchecked")
-        Map<String, Object> map = objectMapper.convertValue(event, Map.class);
+        Map<String, Object> map = OBJECT_MAPPER.convertValue(event, Map.class);
         return new Document(map);
     }
 
     private UnifiedEvent documentToEvent(Document doc) {
-        return objectMapper.convertValue(doc, UnifiedEvent.class);
+        return OBJECT_MAPPER.convertValue(doc, UnifiedEvent.class);
     }
 }

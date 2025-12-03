@@ -60,9 +60,15 @@ public class HttpClientUtil {
         
         if (params != null && !params.isEmpty()) {
             urlBuilder.append("?");
-            params.forEach((key, value) -> 
-                urlBuilder.append(key).append("=").append(value).append("&")
-            );
+            for (Map.Entry<String, String> entry : params.entrySet()) {
+                try {
+                    String encodedKey = java.net.URLEncoder.encode(entry.getKey(), "UTF-8");
+                    String encodedValue = java.net.URLEncoder.encode(entry.getValue(), "UTF-8");
+                    urlBuilder.append(encodedKey).append("=").append(encodedValue).append("&");
+                } catch (java.io.UnsupportedEncodingException e) {
+                    throw new IOException("Failed to encode URL parameters", e);
+                }
+            }
             // Remove trailing &
             urlBuilder.setLength(urlBuilder.length() - 1);
         }

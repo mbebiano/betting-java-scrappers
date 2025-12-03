@@ -135,9 +135,11 @@ public class SuperbetMarketMapper {
                     default -> OutcomeType.OTHER;
                 };
             case 555 -> // Empate Anula Aposta
-                // Option name is team name, need to use code or position
-                optionName.contains("1") ? OutcomeType.HOME : 
-                optionName.contains("2") ? OutcomeType.AWAY : 
+                // Option name is team name, we need to map based on position or code
+                // The first option is typically HOME (1), the second is AWAY (2)
+                // In practice, should check against the team names from event data
+                optionName.contains("1") || optionName.toLowerCase().contains("home") ? OutcomeType.HOME : 
+                optionName.contains("2") || optionName.toLowerCase().contains("away") ? OutcomeType.AWAY : 
                 OutcomeType.OTHER;
             case 532 -> // Resultado Final & Ambas Marcam
                 mapResultadoBttsOutcome(optionName);
