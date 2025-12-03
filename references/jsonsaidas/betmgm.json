@@ -1,0 +1,5089 @@
+{
+  "_id": {
+    "$oid": "6929dcf3de47a343caada00d"
+  },
+  "eventId": "1022853377",
+  "source": "betmgm",
+  "capturedAt": {
+    "$date": "2025-11-28T18:13:30.218Z"
+  },
+  "matchName": "Fortaleza - Atlético-MG",
+  "start": "1764538200000",
+  "sport": "FOOTBALL",
+  "raw": {
+    "betOffers": [
+      {
+        "id": {
+          "$numberLong": "2580555244"
+        },
+        "closed": "2025-11-30T21:30:00Z",
+        "criterion": {
+          "id": 1001159529,
+          "label": "Total de Cartões",
+          "englishLabel": "Total Cards",
+          "order": [],
+          "occurrenceType": "CARDS",
+          "lifetime": "FULL_TIME"
+        },
+        "betOfferType": {
+          "id": 6,
+          "name": "Mais de/Menos de",
+          "englishName": "Over/Under"
+        },
+        "eventId": 1022853377,
+        "outcomes": [
+          {
+            "id": {
+              "$numberLong": "3965552658"
+            },
+            "label": "Mais",
+            "englishLabel": "Over",
+            "odds": 2380,
+            "line": 7500,
+            "type": "OT_OVER",
+            "betOfferId": {
+              "$numberLong": "2580555244"
+            },
+            "changedDate": "2025-11-28T12:23:53Z",
+            "oddsFractional": "11/8",
+            "oddsAmerican": "138",
+            "status": "OPEN",
+            "cashOutStatus": "ENABLED"
+          },
+          {
+            "id": {
+              "$numberLong": "3965552659"
+            },
+            "label": "Menos",
+            "englishLabel": "Under",
+            "odds": 1400,
+            "line": 7500,
+            "type": "OT_UNDER",
+            "betOfferId": {
+              "$numberLong": "2580555244"
+            },
+            "changedDate": "2025-11-28T12:23:53Z",
+            "oddsFractional": "2/5",
+            "oddsAmerican": "-250",
+            "status": "OPEN",
+            "cashOutStatus": "ENABLED"
+          }
+        ],
+        "tags": [
+          "OFFERED_PREMATCH",
+          "BET_BUILDER"
+        ],
+        "cashOutStatus": "ENABLED"
+      }
+    ],
+    "events": [
+      {
+        "id": 1022853377,
+        "name": "Fortaleza - Atlético-MG",
+        "nameDelimiter": "-",
+        "englishName": "Fortaleza-CE - Atlético Mineiro-MG",
+        "homeName": "Fortaleza",
+        "awayName": "Atlético-MG",
+        "start": "2025-11-30T21:30:00Z",
+        "group": "Brasileirão Série A",
+        "groupId": 1000094569,
+        "path": [
+          {
+            "id": 1000093190,
+            "name": "Futebol",
+            "englishName": "Football",
+            "termKey": "football"
+          },
+          {
+            "id": 1000461741,
+            "name": "Brasil",
+            "englishName": "Brazil",
+            "termKey": "brazil"
+          },
+          {
+            "id": 1000094569,
+            "name": "Brasileirão Série A",
+            "englishName": "Brasileirao Serie A",
+            "termKey": "brasileirao_serie_a"
+          }
+        ],
+        "nonLiveBoCount": 432,
+        "sport": "FOOTBALL",
+        "tags": [
+          "OFFERED_LIVE",
+          "BET_BUILDER",
+          "MATCH"
+        ],
+        "state": "NOT_STARTED",
+        "participants": [
+          {
+            "participantId": 1000042141,
+            "name": "Atlético-MG",
+            "englishName": "Atlético Mineiro-MG",
+            "termKey": "atletico_mineiro-mg",
+            "scratched": false,
+            "nonRunner": false,
+            "home": false,
+            "participantType": "TEAM"
+          },
+          {
+            "participantId": 1000078706,
+            "name": "Fortaleza",
+            "englishName": "Fortaleza-CE",
+            "termKey": "fortaleza-ce",
+            "scratched": false,
+            "nonRunner": false,
+            "home": true,
+            "participantType": "TEAM"
+          }
+        ],
+        "groupSortOrder": {
+          "$numberLong": "1003001000000000000"
+        },
+        "prematchEnd": "2025-11-30T21:30:00Z"
+      }
+    ],
+    "prePacks": [
+      {
+        "id": 5343987,
+        "prePackSelections": [
+          {
+            "selectionId": 5978156,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de escanteios Mais 9.5",
+              "Givanildo Souza \"Hulk\" Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 29000,
+                  "american": "2800",
+                  "fractional": "28/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552919"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555349"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343964,
+        "prePackSelections": [
+          {
+            "selectionId": 5978133,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Jogador para marcar 2 ou mais gols"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 23000,
+                  "american": "2200",
+                  "fractional": "22/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552819"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555299"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5358471,
+        "prePackSelections": [
+          {
+            "selectionId": 5999588,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Total de Cartões Mais 6.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 16000,
+                  "american": "1500",
+                  "fractional": "15/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564730"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585102"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5358468,
+        "prePackSelections": [
+          {
+            "selectionId": 5999585,
+            "label": [
+              "Intervalo Fortaleza",
+              "Não Ambos os times marcam",
+              "Adam Bareiro Primeiro jogador a marcar gol",
+              "Total de Cartões Mais 6.5",
+              "Total de escanteios Mais 9.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 51000,
+                  "american": "5000",
+                  "fractional": "50/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552750"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555272"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586425"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965553389"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555546"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564730"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585102"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343967,
+        "prePackSelections": [
+          {
+            "selectionId": 5978136,
+            "label": [
+              "Intervalo Fortaleza",
+              "Adam Bareiro Para marcar",
+              "Total de gols Mais 2.5",
+              "Não Ambos os times marcam"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 26000,
+                  "american": "2500",
+                  "fractional": "25/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552750"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555272"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586425"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343970,
+        "prePackSelections": [
+          {
+            "selectionId": 5978139,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Não Ambos os times marcam",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 16000,
+                  "american": "1500",
+                  "fractional": "15/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586425"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343957,
+        "prePackSelections": [
+          {
+            "selectionId": 5978126,
+            "label": [
+              "Total de cartões - Fortaleza Mais 1.5",
+              "Total de cartões - Atlético-MG Mais 1.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 1210,
+                  "american": "-480",
+                  "fractional": "1/5"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586405"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566840"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552764"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555278"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343954,
+        "prePackSelections": [
+          {
+            "selectionId": 5978123,
+            "label": [
+              "Ambos os times marcam",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 2430,
+                  "american": "143",
+                  "fractional": "7/5"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344280,
+        "prePackSelections": [
+          {
+            "selectionId": 5978476,
+            "label": [
+              "Adam Bareiro Para marcar",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Para receber um cartão"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 15000,
+                  "american": "1400",
+                  "fractional": "14/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5358467,
+        "prePackSelections": [
+          {
+            "selectionId": 5999584,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Total de Cartões Mais 6.5",
+              "Trave ou travessăo acertado no jogo (Decidido usando Dados da Opta) Sim"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 26000,
+                  "american": "2500",
+                  "fractional": "25/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564730"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585102"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564735"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585104"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344284,
+        "prePackSelections": [
+          {
+            "selectionId": 5978480,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Emanuel Brítez Para receber um cartão",
+              "Givanildo Souza \"Hulk\" Para receber um cartão",
+              "Adam Bareiro Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 31000,
+                  "american": "3000",
+                  "fractional": "30/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965553234"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555485"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343953,
+        "prePackSelections": [
+          {
+            "selectionId": 5978122,
+            "label": [
+              "Ambos os times marcam",
+              "Resultado Final Fortaleza",
+              "Total de escanteios Mais 9.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 9500,
+                  "american": "850",
+                  "fractional": "17/2"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344279,
+        "prePackSelections": [
+          {
+            "selectionId": 5978475,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de gols Mais 2.5",
+              "Adam Bareiro Para marcar",
+              "Deyverson Silva Acosta Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 23000,
+                  "american": "2200",
+                  "fractional": "22/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552871"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555325"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344288,
+        "prePackSelections": [
+          {
+            "selectionId": 5978484,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de escanteios Mais 9.5",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Para receber um cartão",
+              "Trave ou travessăo acertado no jogo (Decidido usando Dados da Opta) Sim"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 46000,
+                  "american": "4500",
+                  "fractional": "45/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564735"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585104"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344003,
+        "prePackSelections": [
+          {
+            "selectionId": 5978172,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Para marcar",
+              "Deyverson Silva Acosta Jogador para dar assistência (Decidido usando Dados da Opta)",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 17000,
+                  "american": "1600",
+                  "fractional": "16/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586745"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566998"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343960,
+        "prePackSelections": [
+          {
+            "selectionId": 5978129,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 5200,
+                  "american": "420",
+                  "fractional": "21/5"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343981,
+        "prePackSelections": [
+          {
+            "selectionId": 5978150,
+            "label": [
+              "Chance dupla 1X",
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Sim Ambos os times marcam"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 7500,
+                  "american": "650",
+                  "fractional": "13/2"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552730"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555264"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343961,
+        "prePackSelections": [
+          {
+            "selectionId": 5978130,
+            "label": [
+              "Adam Bareiro Para marcar",
+              "Givanildo Souza \"Hulk\" Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 11500,
+                  "american": "1050",
+                  "fractional": "21/2"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344282,
+        "prePackSelections": [
+          {
+            "selectionId": 5978478,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Para receber um cartão",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 23000,
+                  "american": "2200",
+                  "fractional": "22/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343974,
+        "prePackSelections": [
+          {
+            "selectionId": 5978143,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "Givanildo Souza \"Hulk\" Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Para marcar",
+              "Sim Ambos os times marcam"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 14000,
+                  "american": "1300",
+                  "fractional": "13/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552919"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555349"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343978,
+        "prePackSelections": [
+          {
+            "selectionId": 5978147,
+            "label": [
+              "1/1 Intervalo/Final do jogo",
+              "Adam Bareiro Para marcar",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 17000,
+                  "american": "1600",
+                  "fractional": "16/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586345"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566825"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343984,
+        "prePackSelections": [
+          {
+            "selectionId": 5978153,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Sim Ambos os times marcam",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Total de escanteios Mais 9.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 41000,
+                  "american": "4000",
+                  "fractional": "40/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552919"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555349"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343971,
+        "prePackSelections": [
+          {
+            "selectionId": 5978140,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Sim Ambos os times marcam",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Adam Bareiro Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 15000,
+                  "american": "1400",
+                  "fractional": "14/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343973,
+        "prePackSelections": [
+          {
+            "selectionId": 5978142,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "Não Ambos os times marcam",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 23000,
+                  "american": "2200",
+                  "fractional": "22/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586425"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343951,
+        "prePackSelections": [
+          {
+            "selectionId": 5978120,
+            "label": [
+              "Ambos os times marcam",
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Para marcar",
+              "Total de escanteios Mais 9.5",
+              "Total de Cartões Mais 4.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 23000,
+                  "american": "2200",
+                  "fractional": "22/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552662"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555246"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343999,
+        "prePackSelections": [
+          {
+            "selectionId": 5978168,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Para marcar",
+              "Givanildo Souza \"Hulk\" Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 25000,
+                  "american": "2400",
+                  "fractional": "24/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343946,
+        "prePackSelections": [
+          {
+            "selectionId": 5978115,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Givanildo Souza \"Hulk\" Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 14000,
+                  "american": "1300",
+                  "fractional": "13/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344287,
+        "prePackSelections": [
+          {
+            "selectionId": 5978483,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Para marcar",
+              "Givanildo Souza \"Hulk\" Para receber um cartão",
+              "Total de escanteios Mais 9.5",
+              "Trave ou travessăo acertado no jogo (Decidido usando Dados da Opta) Sim"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 46000,
+                  "american": "4500",
+                  "fractional": "45/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564735"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585104"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343962,
+        "prePackSelections": [
+          {
+            "selectionId": 5978131,
+            "label": [
+              "Total de gols Mais 2.5",
+              "Adam Bareiro Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 5300,
+                  "american": "430",
+                  "fractional": "17/4"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343976,
+        "prePackSelections": [
+          {
+            "selectionId": 5978145,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "Total de gols Mais 2.5",
+              "Givanildo Souza \"Hulk\" Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 11500,
+                  "american": "1050",
+                  "fractional": "21/2"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552919"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555349"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343989,
+        "prePackSelections": [
+          {
+            "selectionId": 5978158,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 17000,
+                  "american": "1600",
+                  "fractional": "16/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5358472,
+        "prePackSelections": [
+          {
+            "selectionId": 5999589,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de escanteios Mais 9.5",
+              "Total de Cartões Mais 6.5",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Para receber um cartão",
+              "Trave ou travessăo acertado no jogo (Decidido usando Dados da Opta) Sim"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 61000,
+                  "american": "6000",
+                  "fractional": "60/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564730"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585102"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564735"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585104"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343969,
+        "prePackSelections": [
+          {
+            "selectionId": 5978138,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Primeiro jogador a marcar gol",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 23000,
+                  "american": "2200",
+                  "fractional": "22/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965553389"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555546"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343977,
+        "prePackSelections": [
+          {
+            "selectionId": 5978146,
+            "label": [
+              "1/1 Intervalo/Final do jogo",
+              "Não Ambos os times marcam",
+              "Total de gols Mais 2.5",
+              "Adam Bareiro Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 26000,
+                  "american": "2500",
+                  "fractional": "25/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586345"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566825"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586425"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344283,
+        "prePackSelections": [
+          {
+            "selectionId": 5978479,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de escanteios Mais 9.5",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Para receber um cartão"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 26000,
+                  "american": "2500",
+                  "fractional": "25/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344278,
+        "prePackSelections": [
+          {
+            "selectionId": 5978474,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Deyverson Silva Acosta Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 6750,
+                  "american": "575",
+                  "fractional": "23/4"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552871"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555325"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344281,
+        "prePackSelections": [
+          {
+            "selectionId": 5978477,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Para marcar",
+              "Givanildo Souza \"Hulk\" Para receber um cartão",
+              "Total de escanteios Mais 9.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 26000,
+                  "american": "2500",
+                  "fractional": "25/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343990,
+        "prePackSelections": [
+          {
+            "selectionId": 5978159,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "Givanildo Souza \"Hulk\" Para marcar",
+              "Emanuel Brítez Para receber um cartão",
+              "Total de escanteios Mais 9.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 23000,
+                  "american": "2200",
+                  "fractional": "22/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965553234"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555485"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343955,
+        "prePackSelections": [
+          {
+            "selectionId": 5978124,
+            "label": [
+              "Total de escanteios Mais 9.5",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 3900,
+                  "american": "290",
+                  "fractional": "29/10"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343966,
+        "prePackSelections": [
+          {
+            "selectionId": 5978135,
+            "label": [
+              "Sim Ambos os times marcam",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Givanildo Souza \"Hulk\" Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Total de gols Mais 2.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 15000,
+                  "american": "1400",
+                  "fractional": "14/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552919"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555349"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5359338,
+        "prePackSelections": [
+          {
+            "selectionId": 6001019,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "'Biel' Teixeira Aragão Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 9500,
+                  "american": "850",
+                  "fractional": "17/2"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586582"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566923"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343952,
+        "prePackSelections": [
+          {
+            "selectionId": 5978121,
+            "label": [
+              "Ambos os times marcam",
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 10000,
+                  "american": "900",
+                  "fractional": "9/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5358469,
+        "prePackSelections": [
+          {
+            "selectionId": 5999586,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Total de escanteios Mais 9.5",
+              "Total de Cartões Mais 6.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 21000,
+                  "american": "2000",
+                  "fractional": "20/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564730"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585102"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5358470,
+        "prePackSelections": [
+          {
+            "selectionId": 5999587,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "Sim Ambos os times marcam",
+              "Total de escanteios Mais 9.5",
+              "Total de Cartões Mais 6.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 18000,
+                  "american": "1700",
+                  "fractional": "17/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564730"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585102"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343968,
+        "prePackSelections": [
+          {
+            "selectionId": 5978137,
+            "label": [
+              "Intervalo Fortaleza",
+              "Adam Bareiro Primeiro jogador a marcar gol",
+              "Total de gols Mais 2.5",
+              "Sim Ambos os times marcam"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 21000,
+                  "american": "2000",
+                  "fractional": "20/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552750"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555272"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965553389"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555546"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343975,
+        "prePackSelections": [
+          {
+            "selectionId": 5978144,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "Total de gols Mais 2.5",
+              "Givanildo Souza \"Hulk\" Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 8000,
+                  "american": "700",
+                  "fractional": "7/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344001,
+        "prePackSelections": [
+          {
+            "selectionId": 5978170,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Trave ou travessăo acertado no jogo (Decidido usando Dados da Opta) Sim"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 14000,
+                  "american": "1300",
+                  "fractional": "13/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564735"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585104"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343998,
+        "prePackSelections": [
+          {
+            "selectionId": 5978167,
+            "label": [
+              "Chance dupla 12",
+              "Adam Bareiro Para marcar",
+              "Givanildo Souza \"Hulk\" Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 16000,
+                  "american": "1500",
+                  "fractional": "15/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552731"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555264"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343988,
+        "prePackSelections": [
+          {
+            "selectionId": 5978157,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Adam Bareiro Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 15000,
+                  "american": "1400",
+                  "fractional": "14/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343956,
+        "prePackSelections": [
+          {
+            "selectionId": 5978125,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Mais escanteios Fortaleza",
+              "A maior quantidade de cartões Atlético-MG"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 7500,
+                  "american": "650",
+                  "fractional": "13/2"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564761"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585114"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564740"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585105"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344285,
+        "prePackSelections": [
+          {
+            "selectionId": 5978481,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "Givanildo Souza \"Hulk\" Para receber um cartão",
+              "Emanuel Brítez Para receber um cartão"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 18000,
+                  "american": "1700",
+                  "fractional": "17/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586809"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580567030"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965553234"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555485"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5344004,
+        "prePackSelections": [
+          {
+            "selectionId": 5978173,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Sim Ambos os times marcam",
+              "Adam Bareiro Jogador - Total chutes a gol (Decidido usando Dados da Opta) Mais 1.5",
+              "Deyverson Silva Acosta Jogador para dar assistência (Decidido usando Dados da Opta)"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 26000,
+                  "american": "2500",
+                  "fractional": "25/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586616"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566940"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586745"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566998"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343949,
+        "prePackSelections": [
+          {
+            "selectionId": 5978118,
+            "label": [
+              "Ambos os times marcam",
+              "Total de escanteios Mais 9.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 3300,
+                  "american": "230",
+                  "fractional": "23/10"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343959,
+        "prePackSelections": [
+          {
+            "selectionId": 5978128,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de gols Menos 4.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 2300,
+                  "american": "130",
+                  "fractional": "13/10"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552689"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555249"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343950,
+        "prePackSelections": [
+          {
+            "selectionId": 5978119,
+            "label": [
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Total de Cartões Mais 4.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 5000,
+                  "american": "400",
+                  "fractional": "4/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552662"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555246"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343980,
+        "prePackSelections": [
+          {
+            "selectionId": 5978149,
+            "label": [
+              "Sim Ambos os times marcam",
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Adam Bareiro Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 11500,
+                  "american": "1050",
+                  "fractional": "21/2"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586422"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586470"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566867"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343958,
+        "prePackSelections": [
+          {
+            "selectionId": 5978127,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Mais escanteios Fortaleza"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 4000,
+                  "american": "300",
+                  "fractional": "3/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564761"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585114"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343948,
+        "prePackSelections": [
+          {
+            "selectionId": 5978117,
+            "label": [
+              "Resultado Final Atlético-MG",
+              "Givanildo Souza \"Hulk\" Para marcar"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 5300,
+                  "american": "430",
+                  "fractional": "17/4"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586442"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564890"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585157"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343963,
+        "prePackSelections": [
+          {
+            "selectionId": 5978132,
+            "label": [
+              "Resultado Final Fortaleza",
+              "Total de gols Mais 2.5",
+              "Total de escanteios Mais 9.5",
+              "Mais escanteios Fortaleza",
+              "Total de Cartões Mais 4.5"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 18000,
+                  "american": "1700",
+                  "fractional": "17/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586440"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566853"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564743"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585107"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586479"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566871"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965564761"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580585114"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965552662"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555246"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      },
+      {
+        "id": 5343994,
+        "prePackSelections": [
+          {
+            "selectionId": 5978163,
+            "label": [
+              "1/1 Intervalo/Final do jogo",
+              "Adam Bareiro Primeiro jogador a marcar gol",
+              "Não Ambos os times marcam"
+            ],
+            "status": "OPEN",
+            "combinations": [
+              {
+                "odds": {
+                  "decimal": 16000,
+                  "american": "1500",
+                  "fractional": "15/1"
+                },
+                "groups": [
+                  {
+                    "operation": "AND",
+                    "groups": [
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586345"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566825"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965553389"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580555546"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "operation": "AND",
+                        "outcomes": [
+                          {
+                            "id": {
+                              "$numberLong": "3965586425"
+                            },
+                            "eventId": 1022853377,
+                            "betOfferId": {
+                              "$numberLong": "2580566847"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "tags": [
+          "AUTO"
+        ]
+      }
+    ],
+    "range": {
+      "start": 0,
+      "size": 1,
+      "total": 432
+    }
+  }
+}

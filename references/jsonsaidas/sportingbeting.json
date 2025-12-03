@@ -1,0 +1,3120 @@
+{
+  "_id": {
+    "$oid": "692819a6de47a343caa074d8"
+  },
+  "eventId": "2:7712376",
+  "source": "sportingbet",
+  "capturedAt": {
+    "$date": "2025-11-27T09:28:04.448Z"
+  },
+  "regionId": 33,
+  "regionName": "Brasil",
+  "competitionId": 102838,
+  "competitionName": "Brasileiro A",
+  "startDate": "2025-11-27T23:30:00Z",
+  "raw": {
+    "fixture": {
+      "id": "2:7712376",
+      "sourceId": 7712376,
+      "name": {
+        "value": "Fluminense - São Paulo",
+        "sign": "zPOKKQ=="
+      },
+      "fixtureType": "PairGame",
+      "context": "v2|pt-br|2:7712376_93_any",
+      "startDate": "2025-11-27T23:30:00Z",
+      "cutOffDate": "2025-11-28T01:30:00Z",
+      "sport": {
+        "type": "Sport",
+        "isEsport": false,
+        "id": 4,
+        "name": {
+          "value": "Futebol"
+        }
+      },
+      "competition": {
+        "statistics": true,
+        "sportId": 4,
+        "compoundId": "2:102838",
+        "type": "Competition",
+        "id": 102838,
+        "parentId": 33,
+        "name": {
+          "value": "Brasileiro A"
+        }
+      },
+      "region": {
+        "code": "BRA",
+        "sportId": 4,
+        "type": "Region",
+        "id": 33,
+        "parentId": 4,
+        "name": {
+          "value": "Brasil"
+        }
+      },
+      "participants": [
+        {
+          "id": 34659531,
+          "participantId": 206081,
+          "name": {
+            "value": "Fluminense"
+          },
+          "status": "NotDefined",
+          "image": {
+            "jersey": "2_206081_1",
+            "rotateJersey": true,
+            "isParticipantProfile": false
+          },
+          "properties": {
+            "type": "HomeTeam"
+          }
+        },
+        {
+          "id": 34659532,
+          "participantId": 206058,
+          "name": {
+            "value": "São Paulo"
+          },
+          "status": "NotDefined",
+          "image": {
+            "jersey": "2_206058_1",
+            "rotateJersey": true,
+            "isParticipantProfile": false
+          },
+          "properties": {
+            "type": "AwayTeam"
+          }
+        }
+      ],
+      "scoreboard": {
+        "messages": {},
+        "corners": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "redCards": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "yellowCards": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "offsides": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "throwIns": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "penaltiesControl": {
+          "team1": {},
+          "team2": {}
+        },
+        "penalties": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "substitutions": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "goalKicks": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "freeKicks": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "scoreDetailed": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "fouls": {
+          "player1": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          },
+          "player2": {
+            "253": 0,
+            "254": 0,
+            "255": 0
+          }
+        },
+        "sportId": 4,
+        "id": "2:7712376",
+        "period": "Não foi iniciado",
+        "periodId": 0,
+        "points": [],
+        "score": "0:0",
+        "timer": {
+          "running": false,
+          "base": "0001-01-01T00:00:00Z",
+          "visible": true,
+          "seconds": 0
+        },
+        "started": false
+      },
+      "totalMarketsCount": 245,
+      "priceBoostCount": 9,
+      "addons": {
+        "betRadar": 58053175,
+        "statistics": true,
+        "runningBall": "5sjxrksjoyjtwbxmjjv3natck",
+        "videoStream": {
+          "provider": "PerformV2",
+          "status": "Scheduled",
+          "providerStreamId": "5sjxrksjoyjtwbxmjjv3natck",
+          "providerEventId": "5sjxrksjoyjtwbxmjjv3natck",
+          "streamType": "FastData",
+          "performOutletKey": "1rkqt3ak2uooo1oc1lqzr17afo",
+          "performBaseUrl": "https://sportingbet.cpp.statsperform.com/api/iframeEmbedding"
+        },
+        "rule4Expected": false,
+        "isResulted": false,
+        "pricingState": "None",
+        "participantDividend": {},
+        "liveMatchTracker": {
+          "sportradarId": 58053175,
+          "coverageLevel": 4
+        },
+        "betBuilderProvider": "BybFootball",
+        "betBuilderId": "2:7712376",
+        "betBuilderTradingV2FixtureId": "2:7712376"
+      },
+      "marketGroups": {
+        "outrightMarketGroupIds": [],
+        "specialMarketGroupIds": [],
+        "type": "MarketGroups",
+        "id": 0
+      },
+      "optionMarkets": [
+        {
+          "id": 190864073,
+          "name": "Craque Sportingbet - Cotas Aumentadas",
+          "status": "Visible",
+          "parameters": {
+            "MarketSubType": "Build a Bet - Price Boost",
+            "MarketType": "FreeFormed"
+          },
+          "options": [
+            {
+              "id": 699177259,
+              "name": "Canobbio e Ferreirinha têm cada um 5 pontos ou mais",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2282221982"
+                },
+                "numerator": 8,
+                "denominator": 5,
+                "odds": 2.6,
+                "americanOdds": 160
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2286210557"
+                },
+                "numerator": 9,
+                "denominator": 5,
+                "odds": 2.8,
+                "americanOdds": 180
+              }
+            }
+          ]
+        },
+        {
+          "id": 190858529,
+          "name": "Criar Aposta - Cotas Aumentadas",
+          "status": "Visible",
+          "parameters": {
+            "MarketSubType": "Build a Bet - Price Boost",
+            "MarketType": "FreeFormed"
+          },
+          "options": [
+            {
+              "id": 699157224,
+              "name": "X ou São Paulo, +0.5 gols no 1º tempo e Luciano Neves tem +1.5 chutes no gol",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2282058285"
+                },
+                "numerator": 17,
+                "denominator": 4,
+                "odds": 5.25,
+                "americanOdds": 425
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2286210224"
+                },
+                "numerator": 19,
+                "denominator": 4,
+                "odds": 5.75,
+                "americanOdds": 475
+              }
+            }
+          ]
+        },
+        {
+          "id": 190506465,
+          "name": "Chance Dupla",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Goal",
+            "MarketType": "DoubleChance",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 696911342,
+              "name": "Fluminense ou Empate",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775129"
+                },
+                "numerator": 2,
+                "denominator": 15,
+                "odds": 1.13,
+                "americanOdds": -750
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911343,
+              "name": "Empate ou São Paulo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775130"
+                },
+                "numerator": 6,
+                "denominator": 5,
+                "odds": 2.2,
+                "americanOdds": 120
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911344,
+              "name": "Fluminense ou São Paulo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775131"
+                },
+                "numerator": 2,
+                "denominator": 7,
+                "odds": 1.28,
+                "americanOdds": -350
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190506468,
+          "name": "Empate Anula Aposta",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Goal",
+            "MarketType": "DrawNoBet",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 696911351,
+              "name": "Fluminense",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775138"
+                },
+                "numerator": 1,
+                "denominator": 5,
+                "odds": 1.2,
+                "americanOdds": -500
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911352,
+              "name": "São Paulo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775139"
+                },
+                "numerator": 31,
+                "denominator": 10,
+                "odds": 4.1,
+                "americanOdds": 310
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190506482,
+          "name": "Ambas equipes marcam gol",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Goal",
+            "MarketType": "BTTS",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 696911394,
+              "name": "Sim",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775813"
+                },
+                "numerator": 13,
+                "denominator": 10,
+                "odds": 2.3,
+                "americanOdds": 130
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2288097003"
+                },
+                "numerator": 29,
+                "denominator": 20,
+                "odds": 2.45,
+                "americanOdds": 145
+              }
+            },
+            {
+              "id": 696911395,
+              "name": "Não",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775818"
+                },
+                "numerator": 11,
+                "denominator": 20,
+                "odds": 1.55,
+                "americanOdds": -185
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918088,
+          "name": "Handicap – Resultado Final",
+          "status": "Visible",
+          "parameters": {
+            "Handicap": "-1.0000",
+            "Happening": "Goal",
+            "MarketType": "Handicap",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556148,
+              "name": "Fluminense (-1)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991629"
+                },
+                "numerator": 9,
+                "denominator": 5,
+                "odds": 2.8,
+                "americanOdds": 180
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556149,
+              "name": "Handicap Empate - Fluminense (-1)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991630"
+                },
+                "numerator": 11,
+                "denominator": 5,
+                "odds": 3.2,
+                "americanOdds": 220
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556150,
+              "name": "São Paulo (1)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991631"
+                },
+                "numerator": 6,
+                "denominator": 5,
+                "odds": 2.2,
+                "americanOdds": 120
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918089,
+          "name": "Handicap – Resultado Final",
+          "status": "Visible",
+          "parameters": {
+            "Handicap": "-2.0000",
+            "Happening": "Goal",
+            "MarketType": "Handicap",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556151,
+              "name": "Fluminense (-2)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991632"
+                },
+                "numerator": 19,
+                "denominator": 4,
+                "odds": 5.75,
+                "americanOdds": 475
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2284415183"
+                },
+                "numerator": 23,
+                "denominator": 4,
+                "odds": 6.75,
+                "americanOdds": 575
+              }
+            },
+            {
+              "id": 699556152,
+              "name": "Handicap Empate - Fluminense (-2)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991633"
+                },
+                "numerator": 18,
+                "denominator": 5,
+                "odds": 4.6,
+                "americanOdds": 360
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556153,
+              "name": "São Paulo (2)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991634"
+                },
+                "numerator": 38,
+                "denominator": 100,
+                "odds": 1.38,
+                "americanOdds": -275
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918090,
+          "name": "Handicap – Resultado Final",
+          "status": "Visible",
+          "parameters": {
+            "Handicap": "1.0000",
+            "Happening": "Goal",
+            "MarketType": "Handicap",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556154,
+              "name": "Fluminense (1)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991635"
+                },
+                "numerator": 2,
+                "denominator": 15,
+                "odds": 1.13,
+                "americanOdds": -750
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556155,
+              "name": "Handicap Empate - Fluminense (1)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991636"
+                },
+                "numerator": 6,
+                "denominator": 1,
+                "odds": 7,
+                "americanOdds": 600
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556156,
+              "name": "São Paulo (-1)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991637"
+                },
+                "numerator": 14,
+                "denominator": 1,
+                "odds": 15,
+                "americanOdds": 1400
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918091,
+          "name": "Resultado do jogo e Total de gols 2,5",
+          "status": "Visible",
+          "parameters": {
+            "DecimalValue": "2.5000",
+            "Happening": "Goal",
+            "MarketType": "ThreeWayAndOverUnder",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556157,
+              "name": "Fluminense e mais de 2,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991638"
+                },
+                "numerator": 39,
+                "denominator": 20,
+                "odds": 2.95,
+                "americanOdds": 195
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556158,
+              "name": "São Paulo e mais de 2,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991639"
+                },
+                "numerator": 10,
+                "denominator": 1,
+                "odds": 11,
+                "americanOdds": 1000
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556159,
+              "name": "Empate e mais de 2,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991640"
+                },
+                "numerator": 16,
+                "denominator": 1,
+                "odds": 17,
+                "americanOdds": 1600
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556160,
+              "name": "Fluminense e menos de 2,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991641"
+                },
+                "numerator": 2,
+                "denominator": 1,
+                "odds": 3,
+                "americanOdds": 200
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556161,
+              "name": "São Paulo e menos de 2,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991642"
+                },
+                "numerator": 29,
+                "denominator": 4,
+                "odds": 8.25,
+                "americanOdds": 725
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556162,
+              "name": "Empate e menos de 2,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991643"
+                },
+                "numerator": 14,
+                "denominator": 5,
+                "odds": 3.8,
+                "americanOdds": 280
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918092,
+          "name": "Resultado do jogo e Total de gols 1,5",
+          "status": "Visible",
+          "parameters": {
+            "DecimalValue": "1.5000",
+            "Happening": "Goal",
+            "MarketType": "ThreeWayAndOverUnder",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556163,
+              "name": "Fluminense e mais de 1,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991644"
+                },
+                "numerator": 23,
+                "denominator": 20,
+                "odds": 2.15,
+                "americanOdds": 115
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556164,
+              "name": "São Paulo e mais de 1,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991645"
+                },
+                "numerator": 31,
+                "denominator": 4,
+                "odds": 8.75,
+                "americanOdds": 775
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556165,
+              "name": "Empate e mais de 1,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991646"
+                },
+                "numerator": 9,
+                "denominator": 2,
+                "odds": 5.5,
+                "americanOdds": 450
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556166,
+              "name": "Fluminense e menos de 1,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991647"
+                },
+                "numerator": 4,
+                "denominator": 1,
+                "odds": 5,
+                "americanOdds": 400
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556167,
+              "name": "São Paulo e menos de 1,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991648"
+                },
+                "numerator": 19,
+                "denominator": 2,
+                "odds": 10.5,
+                "americanOdds": 950
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556168,
+              "name": "Empate e menos de 1,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991649"
+                },
+                "numerator": 23,
+                "denominator": 4,
+                "odds": 6.75,
+                "americanOdds": 575
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918093,
+          "name": "Resultado do jogo e Total de gols 3,5",
+          "status": "Visible",
+          "parameters": {
+            "DecimalValue": "3.5000",
+            "Happening": "Goal",
+            "MarketType": "ThreeWayAndOverUnder",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556169,
+              "name": "Fluminense e mais de 3,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991650"
+                },
+                "numerator": 19,
+                "denominator": 4,
+                "odds": 5.75,
+                "americanOdds": 475
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556170,
+              "name": "São Paulo e mais de 3,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991651"
+                },
+                "numerator": 25,
+                "denominator": 1,
+                "odds": 26,
+                "americanOdds": 2500
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556171,
+              "name": "Empate e mais de 3,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991652"
+                },
+                "numerator": 16,
+                "denominator": 1,
+                "odds": 17,
+                "americanOdds": 1600
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556172,
+              "name": "Fluminense e menos de 3,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991653"
+                },
+                "numerator": 21,
+                "denominator": 20,
+                "odds": 2.05,
+                "americanOdds": 105
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556173,
+              "name": "São Paulo e menos de 3,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991654"
+                },
+                "numerator": 5,
+                "denominator": 1,
+                "odds": 6,
+                "americanOdds": 500
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556174,
+              "name": "Empate e menos de 3,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991655"
+                },
+                "numerator": 14,
+                "denominator": 5,
+                "odds": 3.8,
+                "americanOdds": 280
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190974555,
+          "name": "Marcador a qualquer momento",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Goal",
+            "MarketType": "Scorer",
+            "Period": "RegularTime",
+            "Places": "1",
+            "Position": "Any"
+          },
+          "options": [
+            {
+              "id": 699902837,
+              "name": "Everaldo Stum",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024275"
+                },
+                "numerator": 7,
+                "denominator": 4,
+                "odds": 2.75,
+                "americanOdds": 175
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902848,
+              "name": "John Kennedy",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024286"
+                },
+                "numerator": 21,
+                "denominator": 10,
+                "odds": 3.1,
+                "americanOdds": 210
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902854,
+              "name": "Luciano Acosta",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024292"
+                },
+                "numerator": 11,
+                "denominator": 5,
+                "odds": 3.2,
+                "americanOdds": 220
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2286203809"
+                },
+                "numerator": 12,
+                "denominator": 5,
+                "odds": 3.4,
+                "americanOdds": 240
+              }
+            },
+            {
+              "id": 699902851,
+              "name": "Kevin Serna",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024289"
+                },
+                "numerator": 13,
+                "denominator": 5,
+                "odds": 3.6,
+                "americanOdds": 260
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902874,
+              "name": "Santiago Moreno",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024312"
+                },
+                "numerator": 14,
+                "denominator": 5,
+                "odds": 3.8,
+                "americanOdds": 280
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902872,
+              "name": "Ruben Lezcano",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024310"
+                },
+                "numerator": 3,
+                "denominator": 1,
+                "odds": 4,
+                "americanOdds": 300
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902829,
+              "name": "Agustin Canobbio",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024267"
+                },
+                "numerator": 16,
+                "denominator": 5,
+                "odds": 4.2,
+                "americanOdds": 320
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902847,
+              "name": "Joaquin Lavega",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024285"
+                },
+                "numerator": 16,
+                "denominator": 5,
+                "odds": 4.2,
+                "americanOdds": 320
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902877,
+              "name": "Vinicius Moreira",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024315"
+                },
+                "numerator": 7,
+                "denominator": 2,
+                "odds": 4.5,
+                "americanOdds": 350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902878,
+              "name": "Yeferson Soteldo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024316"
+                },
+                "numerator": 7,
+                "denominator": 2,
+                "odds": 4.5,
+                "americanOdds": 350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902850,
+              "name": "Keno",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024288"
+                },
+                "numerator": 18,
+                "denominator": 5,
+                "odds": 4.6,
+                "americanOdds": 360
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902844,
+              "name": "Hercules",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024282"
+                },
+                "numerator": 4,
+                "denominator": 1,
+                "odds": 5,
+                "americanOdds": 400
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902879,
+              "name": "Luciano Neves",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024317"
+                },
+                "numerator": 17,
+                "denominator": 4,
+                "odds": 5.25,
+                "americanOdds": 425
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902842,
+              "name": "Tapia, Gonzalo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024280"
+                },
+                "numerator": 17,
+                "denominator": 4,
+                "odds": 5.25,
+                "americanOdds": 425
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902852,
+              "name": "Lucas Moura",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024290"
+                },
+                "numerator": 9,
+                "denominator": 2,
+                "odds": 5.5,
+                "americanOdds": 450
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902870,
+              "name": "Riquelme Felipe Silva de Almeida",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024308"
+                },
+                "numerator": 19,
+                "denominator": 4,
+                "odds": 5.75,
+                "americanOdds": 475
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902841,
+              "name": "Ganso",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024279"
+                },
+                "numerator": 19,
+                "denominator": 4,
+                "odds": 5.75,
+                "americanOdds": 475
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902862,
+              "name": "Nonato",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024300"
+                },
+                "numerator": 5,
+                "denominator": 1,
+                "odds": 6,
+                "americanOdds": 500
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902866,
+              "name": "Paulo Sergio",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024304"
+                },
+                "numerator": 11,
+                "denominator": 2,
+                "odds": 6.5,
+                "americanOdds": 550
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902831,
+              "name": "Aldemir Ferreira",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024269"
+                },
+                "numerator": 11,
+                "denominator": 2,
+                "odds": 6.5,
+                "americanOdds": 550
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902835,
+              "name": "Emiliano Ariel Rigoni",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024273"
+                },
+                "numerator": 25,
+                "denominator": 4,
+                "odds": 7.25,
+                "americanOdds": 625
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902845,
+              "name": "Ignacio",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024283"
+                },
+                "numerator": 13,
+                "denominator": 2,
+                "odds": 7.5,
+                "americanOdds": 650
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902880,
+              "name": "Nenhum marcador",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024318"
+                },
+                "numerator": 13,
+                "denominator": 2,
+                "odds": 7.5,
+                "americanOdds": 650
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902834,
+              "name": "Damian Bobadilla",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024272"
+                },
+                "numerator": 17,
+                "denominator": 2,
+                "odds": 9.5,
+                "americanOdds": 850
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902859,
+              "name": "Martinelli",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024297"
+                },
+                "numerator": 35,
+                "denominator": 4,
+                "odds": 9.75,
+                "americanOdds": 875
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902871,
+              "name": "Rodriguinho Almeida",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024309"
+                },
+                "numerator": 19,
+                "denominator": 2,
+                "odds": 10.5,
+                "americanOdds": 950
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902853,
+              "name": "Lucca Marques",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024291"
+                },
+                "numerator": 10,
+                "denominator": 1,
+                "odds": 11,
+                "americanOdds": 1000
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902867,
+              "name": "Pedro Ferreira",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024305"
+                },
+                "numerator": 12,
+                "denominator": 1,
+                "odds": 13,
+                "americanOdds": 1200
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902873,
+              "name": "Samuel Xavier",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024311"
+                },
+                "numerator": 12,
+                "denominator": 1,
+                "odds": 13,
+                "americanOdds": 1200
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902876,
+              "name": "Silva, Thiago",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024314"
+                },
+                "numerator": 12,
+                "denominator": 1,
+                "odds": 13,
+                "americanOdds": 1200
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902855,
+              "name": "Luiz Gustavo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024293"
+                },
+                "numerator": 27,
+                "denominator": 2,
+                "odds": 14.5,
+                "americanOdds": 1350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902856,
+              "name": "Maik",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024294"
+                },
+                "numerator": 27,
+                "denominator": 2,
+                "odds": 14.5,
+                "americanOdds": 1350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902857,
+              "name": "Mailton",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024295"
+                },
+                "numerator": 27,
+                "denominator": 2,
+                "odds": 14.5,
+                "americanOdds": 1350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902858,
+              "name": "Marcos António",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024296"
+                },
+                "numerator": 27,
+                "denominator": 2,
+                "odds": 14.5,
+                "americanOdds": 1350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902843,
+              "name": "Guga",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024281"
+                },
+                "numerator": 27,
+                "denominator": 2,
+                "odds": 14.5,
+                "americanOdds": 1350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902849,
+              "name": "Juan Pablo Freytes",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024287"
+                },
+                "numerator": 27,
+                "denominator": 2,
+                "odds": 14.5,
+                "americanOdds": 1350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902863,
+              "name": "Otavio",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024301"
+                },
+                "numerator": 16,
+                "denominator": 1,
+                "odds": 17,
+                "americanOdds": 1600
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902875,
+              "name": "Thiago Santos",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024313"
+                },
+                "numerator": 16,
+                "denominator": 1,
+                "odds": 17,
+                "americanOdds": 1600
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902836,
+              "name": "Enzo Diaz",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024274"
+                },
+                "numerator": 16,
+                "denominator": 1,
+                "odds": 17,
+                "americanOdds": 1600
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902838,
+              "name": "Facundo Bernal",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024276"
+                },
+                "numerator": 16,
+                "denominator": 1,
+                "odds": 17,
+                "americanOdds": 1600
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902846,
+              "name": "Igor Rabello",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024284"
+                },
+                "numerator": 16,
+                "denominator": 1,
+                "odds": 17,
+                "americanOdds": 1600
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902864,
+              "name": "Pablo Maia",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024302"
+                },
+                "numerator": 35,
+                "denominator": 2,
+                "odds": 18.5,
+                "americanOdds": 1750
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902861,
+              "name": "Nicolas Bosshardt",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024299"
+                },
+                "numerator": 19,
+                "denominator": 1,
+                "odds": 20,
+                "americanOdds": 1900
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902865,
+              "name": "Patryck",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024303"
+                },
+                "numerator": 19,
+                "denominator": 1,
+                "odds": 20,
+                "americanOdds": 1900
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902869,
+              "name": "Rene",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024307"
+                },
+                "numerator": 19,
+                "denominator": 1,
+                "odds": 20,
+                "americanOdds": 1900
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902832,
+              "name": "Alisson",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024270"
+                },
+                "numerator": 19,
+                "denominator": 1,
+                "odds": 20,
+                "americanOdds": 1900
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902833,
+              "name": "Cedric Soares",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024271"
+                },
+                "numerator": 19,
+                "denominator": 1,
+                "odds": 20,
+                "americanOdds": 1900
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902839,
+              "name": "Felipe Negrucci",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024277"
+                },
+                "numerator": 19,
+                "denominator": 1,
+                "odds": 20,
+                "americanOdds": 1900
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902840,
+              "name": "Gabriel Fuentes",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024278"
+                },
+                "numerator": 19,
+                "denominator": 1,
+                "odds": 20,
+                "americanOdds": 1900
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902868,
+              "name": "Rafael Toloi",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024306"
+                },
+                "numerator": 25,
+                "denominator": 1,
+                "odds": 26,
+                "americanOdds": 2500
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902860,
+              "name": "Nahuel Ferraresi",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024298"
+                },
+                "numerator": 28,
+                "denominator": 1,
+                "odds": 29,
+                "americanOdds": 2800
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699902830,
+              "name": "Alan Javier Franco",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2286024268"
+                },
+                "numerator": 45,
+                "denominator": 1,
+                "odds": 46,
+                "americanOdds": 4500
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918094,
+          "name": "Resultado do jogo e Total de gols 4,5",
+          "status": "Visible",
+          "parameters": {
+            "DecimalValue": "4.5000",
+            "Happening": "Goal",
+            "MarketType": "ThreeWayAndOverUnder",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556175,
+              "name": "Fluminense e mais de 4,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991656"
+                },
+                "numerator": 19,
+                "denominator": 2,
+                "odds": 10.5,
+                "americanOdds": 950
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556176,
+              "name": "São Paulo e mais de 4,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991657"
+                },
+                "numerator": 35,
+                "denominator": 1,
+                "odds": 36,
+                "americanOdds": 3500
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556177,
+              "name": "Empate e mais de 4,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991658"
+                },
+                "numerator": 60,
+                "denominator": 1,
+                "odds": 61,
+                "americanOdds": 6000
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556178,
+              "name": "Fluminense e menos de 4,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991659"
+                },
+                "numerator": 78,
+                "denominator": 100,
+                "odds": 1.78,
+                "americanOdds": -130
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556179,
+              "name": "São Paulo e menos de 4,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991660"
+                },
+                "numerator": 19,
+                "denominator": 4,
+                "odds": 5.75,
+                "americanOdds": 475
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556180,
+              "name": "Empate e menos de 4,5 gols marcados",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283991661"
+                },
+                "numerator": 12,
+                "denominator": 5,
+                "odds": 3.4,
+                "americanOdds": 240
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190506491,
+          "name": "Resultado da Partida e Quais Equipes Marcam",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Goal",
+            "MarketType": "ThreeWayAndBTTS",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 696911419,
+              "name": "Fluminense vence e ambas as equipes marcam",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775513"
+                },
+                "numerator": 17,
+                "denominator": 5,
+                "odds": 4.4,
+                "americanOdds": 340
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911420,
+              "name": "São Paulo vence e ambas as equipes marcam",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775514"
+                },
+                "numerator": 11,
+                "denominator": 1,
+                "odds": 12,
+                "americanOdds": 1100
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911421,
+              "name": "Fluminense vence sem levar gol",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775515"
+                },
+                "numerator": 13,
+                "denominator": 10,
+                "odds": 2.3,
+                "americanOdds": 130
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911422,
+              "name": "São Paulo vence sem levar gol",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775516"
+                },
+                "numerator": 27,
+                "denominator": 4,
+                "odds": 7.75,
+                "americanOdds": 675
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911423,
+              "name": "Ambas marcam e a partida termina empatada",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775517"
+                },
+                "numerator": 9,
+                "denominator": 2,
+                "odds": 5.5,
+                "americanOdds": 450
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911424,
+              "name": "Nenhuma equipe marca",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775518"
+                },
+                "numerator": 23,
+                "denominator": 4,
+                "odds": 6.75,
+                "americanOdds": 575
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190506508,
+          "name": "Vence e ambas equipes marcam gol",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Goal",
+            "MarketType": "ToWinAndBTTS",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 696911496,
+              "name": "Fluminense vence e ambas as equipes marcam",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775830"
+                },
+                "numerator": 17,
+                "denominator": 5,
+                "odds": 4.4,
+                "americanOdds": 340
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911497,
+              "name": "São Paulo vence e ambas as equipes marcam",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775831"
+                },
+                "numerator": 11,
+                "denominator": 1,
+                "odds": 12,
+                "americanOdds": 1100
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696911498,
+              "name": "Ambas marcam e a partida termina empatada",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270775832"
+                },
+                "numerator": 9,
+                "denominator": 2,
+                "odds": 5.5,
+                "americanOdds": 450
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918127,
+          "name": "Chance Dupla e Total de Gols",
+          "status": "Visible",
+          "parameters": {
+            "DecimalValue": "2.5000",
+            "Happening": "Goal",
+            "MarketType": "DoubleChanceAndOverUnder",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556263,
+              "name": "Fluminense ou X e mais de 2,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992060"
+                },
+                "numerator": 33,
+                "denominator": 20,
+                "odds": 2.65,
+                "americanOdds": 165
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556264,
+              "name": "X ou São Paulo e mais de 2,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992061"
+                },
+                "numerator": 27,
+                "denominator": 4,
+                "odds": 7.75,
+                "americanOdds": 675
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556265,
+              "name": "Fluminense ou São Paulo e mais de 2,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992062"
+                },
+                "numerator": 6,
+                "denominator": 4,
+                "odds": 2.5,
+                "americanOdds": 150
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556266,
+              "name": "Fluminense ou X e menos de 2,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992063"
+                },
+                "numerator": 4,
+                "denominator": 5,
+                "odds": 1.8,
+                "americanOdds": -125
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556267,
+              "name": "X ou São Paulo e menos de 2,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992064"
+                },
+                "numerator": 9,
+                "denominator": 5,
+                "odds": 2.8,
+                "americanOdds": 180
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556268,
+              "name": "Fluminense ou São Paulo e menos de 2,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992065"
+                },
+                "numerator": 11,
+                "denominator": 8,
+                "odds": 2.37,
+                "americanOdds": 138
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918128,
+          "name": "Chance Dupla e Total de Gols",
+          "status": "Visible",
+          "parameters": {
+            "DecimalValue": "1.5000",
+            "Happening": "Goal",
+            "MarketType": "DoubleChanceAndOverUnder",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556269,
+              "name": "Fluminense ou X e mais de 1,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992066"
+                },
+                "numerator": 63,
+                "denominator": 100,
+                "odds": 1.63,
+                "americanOdds": -160
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556270,
+              "name": "X ou São Paulo e mais de 1,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992067"
+                },
+                "numerator": 27,
+                "denominator": 10,
+                "odds": 3.7,
+                "americanOdds": 270
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556271,
+              "name": "Fluminense ou São Paulo e mais de 1,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992068"
+                },
+                "numerator": 82,
+                "denominator": 100,
+                "odds": 1.82,
+                "americanOdds": -120
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556272,
+              "name": "Fluminense ou X e menos de 1,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992069"
+                },
+                "numerator": 21,
+                "denominator": 10,
+                "odds": 3.1,
+                "americanOdds": 210
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556273,
+              "name": "X ou São Paulo e menos de 1,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992070"
+                },
+                "numerator": 18,
+                "denominator": 5,
+                "odds": 4.6,
+                "americanOdds": 360
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556274,
+              "name": "Fluminense ou São Paulo e menos de 1,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992071"
+                },
+                "numerator": 27,
+                "denominator": 10,
+                "odds": 3.7,
+                "americanOdds": 270
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918129,
+          "name": "Chance Dupla e Total de Gols",
+          "status": "Visible",
+          "parameters": {
+            "DecimalValue": "3.5000",
+            "Happening": "Goal",
+            "MarketType": "DoubleChanceAndOverUnder",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556275,
+              "name": "Fluminense ou X e mais de 3,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992072"
+                },
+                "numerator": 15,
+                "denominator": 4,
+                "odds": 4.75,
+                "americanOdds": 375
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556276,
+              "name": "X ou São Paulo e mais de 3,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992073"
+                },
+                "numerator": 11,
+                "denominator": 1,
+                "odds": 12,
+                "americanOdds": 1100
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556277,
+              "name": "Fluminense ou São Paulo e mais de 3,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992074"
+                },
+                "numerator": 4,
+                "denominator": 1,
+                "odds": 5,
+                "americanOdds": 400
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556278,
+              "name": "Fluminense ou X e menos de 3,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992075"
+                },
+                "numerator": 2,
+                "denominator": 5,
+                "odds": 1.4,
+                "americanOdds": -250
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556279,
+              "name": "X ou São Paulo e menos de 3,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992076"
+                },
+                "numerator": 6,
+                "denominator": 4,
+                "odds": 2.5,
+                "americanOdds": 150
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556280,
+              "name": "Fluminense ou São Paulo e menos de 3,5 gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992077"
+                },
+                "numerator": 8,
+                "denominator": 13,
+                "odds": 1.61,
+                "americanOdds": -165
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190918131,
+          "name": "Handicap",
+          "status": "Visible",
+          "parameters": {
+            "DecimalHandicap": "-0.5000",
+            "Happening": "Goal",
+            "MarketType": "2wayHandicap",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 699556284,
+              "name": "Fluminense (-0,5)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992169"
+                },
+                "numerator": 58,
+                "denominator": 100,
+                "odds": 1.58,
+                "americanOdds": -175
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699556285,
+              "name": "São Paulo (0,5)",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2283992170"
+                },
+                "numerator": 6,
+                "denominator": 5,
+                "odds": 2.2,
+                "americanOdds": 120
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190506549,
+          "name": "Resultado da Partida - VP (+2)",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Goal",
+            "MarketSubType": "2Up3wayPricing",
+            "MarketType": "3way",
+            "Period": "RegularTime"
+          },
+          "options": [
+            {
+              "id": 696912000,
+              "name": "Fluminense",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270778850"
+                },
+                "numerator": 13,
+                "denominator": 20,
+                "odds": 1.65,
+                "americanOdds": -155
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696912001,
+              "name": "X",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270778863"
+                },
+                "numerator": 13,
+                "denominator": 5,
+                "odds": 3.6,
+                "americanOdds": 260
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 696912002,
+              "name": "São Paulo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2270778876"
+                },
+                "numerator": 5,
+                "denominator": 1,
+                "odds": 6,
+                "americanOdds": 500
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190506567,
+          "name": "2 ou mais chutes no gol",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Shot",
+            "MarketSubType": "Dynamic",
+            "MarketType": "Scorer",
+            "Outcome": "OnTarget",
+            "Period": "RegularTime",
+            "Places": "2",
+            "Position": "Any"
+          },
+          "options": [
+            {
+              "id": 699725076,
+              "name": "Luciano Acosta",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240399"
+                },
+                "numerator": 37,
+                "denominator": 20,
+                "odds": 2.85,
+                "americanOdds": 185
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725075,
+              "name": "Everaldo Stum",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240394"
+                },
+                "numerator": 39,
+                "denominator": 20,
+                "odds": 2.95,
+                "americanOdds": 195
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2286205117"
+                },
+                "numerator": 12,
+                "denominator": 5,
+                "odds": 3.4,
+                "americanOdds": 240
+              }
+            },
+            {
+              "id": 699725063,
+              "name": "Agustin Canobbio",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240334"
+                },
+                "numerator": 12,
+                "denominator": 5,
+                "odds": 3.4,
+                "americanOdds": 240
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725067,
+              "name": "Kevin Serna",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240354"
+                },
+                "numerator": 5,
+                "denominator": 2,
+                "odds": 3.5,
+                "americanOdds": 250
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725058,
+              "name": "Vinicius Moreira",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240309"
+                },
+                "numerator": 29,
+                "denominator": 10,
+                "odds": 3.9,
+                "americanOdds": 290
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725096,
+              "name": "André Silva",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240499"
+                },
+                "numerator": 17,
+                "denominator": 5,
+                "odds": 4.4,
+                "americanOdds": 340
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725099,
+              "name": "Tapia, Gonzalo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240514"
+                },
+                "numerator": 17,
+                "denominator": 5,
+                "odds": 4.4,
+                "americanOdds": 340
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725083,
+              "name": "Facundo Bernal",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240434"
+                },
+                "numerator": 9,
+                "denominator": 2,
+                "odds": 5.5,
+                "americanOdds": 450
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725059,
+              "name": "Nonato",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240314"
+                },
+                "numerator": 5,
+                "denominator": 1,
+                "odds": 6,
+                "americanOdds": 500
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725066,
+              "name": "Hercules",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240349"
+                },
+                "numerator": 7,
+                "denominator": 1,
+                "odds": 8,
+                "americanOdds": 700
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725119,
+              "name": "Lucca Marques",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240614"
+                },
+                "numerator": 8,
+                "denominator": 1,
+                "odds": 9,
+                "americanOdds": 800
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725065,
+              "name": "Martinelli",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240344"
+                },
+                "numerator": 11,
+                "denominator": 1,
+                "odds": 12,
+                "americanOdds": 1100
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725105,
+              "name": "Luiz Gustavo",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240544"
+                },
+                "numerator": 23,
+                "denominator": 2,
+                "odds": 12.5,
+                "americanOdds": 1150
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725109,
+              "name": "Maik",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240564"
+                },
+                "numerator": 12,
+                "denominator": 1,
+                "odds": 13,
+                "americanOdds": 1200
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725098,
+              "name": "Pablo Maia",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240509"
+                },
+                "numerator": 27,
+                "denominator": 2,
+                "odds": 14.5,
+                "americanOdds": 1350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725104,
+              "name": "Mailton",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240539"
+                },
+                "numerator": 27,
+                "denominator": 2,
+                "odds": 14.5,
+                "americanOdds": 1350
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725060,
+              "name": "Guga",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240319"
+                },
+                "numerator": 14,
+                "denominator": 1,
+                "odds": 15,
+                "americanOdds": 1400
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725061,
+              "name": "Silva, Thiago",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240324"
+                },
+                "numerator": 14,
+                "denominator": 1,
+                "odds": 15,
+                "americanOdds": 1400
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725079,
+              "name": "Ignacio",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240414"
+                },
+                "numerator": 14,
+                "denominator": 1,
+                "odds": 15,
+                "americanOdds": 1400
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725100,
+              "name": "Damian Bobadilla",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240519"
+                },
+                "numerator": 15,
+                "denominator": 1,
+                "odds": 16,
+                "americanOdds": 1500
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725078,
+              "name": "Juan Pablo Freytes",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240409"
+                },
+                "numerator": 17,
+                "denominator": 1,
+                "odds": 18,
+                "americanOdds": 1700
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699723963,
+              "name": "Alisson",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285234766"
+                },
+                "numerator": 18,
+                "denominator": 1,
+                "odds": 19,
+                "americanOdds": 1800
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725095,
+              "name": "Marcos António",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240494"
+                },
+                "numerator": 37,
+                "denominator": 2,
+                "odds": 19.5,
+                "americanOdds": 1850
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725097,
+              "name": "Nahuel Ferraresi",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240504"
+                },
+                "numerator": 37,
+                "denominator": 2,
+                "odds": 19.5,
+                "americanOdds": 1850
+              },
+              "boostedPrice": null
+            },
+            {
+              "id": 699725071,
+              "name": "Samuel Xavier",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2285240374"
+                },
+                "numerator": 19,
+                "denominator": 1,
+                "odds": 20,
+                "americanOdds": 1900
+              },
+              "boostedPrice": null
+            }
+          ]
+        },
+        {
+          "id": 190857535,
+          "name": "Chutes no Gol",
+          "status": "Visible",
+          "parameters": {
+            "MarketSubType": "Shots on target",
+            "MarketType": "FreeFormed"
+          },
+          "options": [
+            {
+              "id": 699153410,
+              "name": "Luciano Acosta e Luciano Neves têm cada um +0.5 chutes no gol",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2282021344"
+                },
+                "numerator": 27,
+                "denominator": 20,
+                "odds": 2.35,
+                "americanOdds": 135
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2286210294"
+                },
+                "numerator": 29,
+                "denominator": 20,
+                "odds": 2.45,
+                "americanOdds": 145
+              }
+            }
+          ]
+        },
+        {
+          "id": 191012920,
+          "name": "BIG ODD",
+          "status": "Visible",
+          "parameters": {
+            "MarketSubType": "BigOdd",
+            "MarketType": "FreeFormed"
+          },
+          "options": [
+            {
+              "id": 700232769,
+              "name": "Ambas as equipes marcam e a partida tem 3 ou mais gols",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2287824797"
+                },
+                "numerator": 2,
+                "denominator": 1,
+                "odds": 3,
+                "americanOdds": 200
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2287825255"
+                },
+                "numerator": 3,
+                "denominator": 1,
+                "odds": 4,
+                "americanOdds": 300
+              }
+            }
+          ]
+        },
+        {
+          "id": 191044521,
+          "name": "4 ou mais defesas",
+          "status": "Visible",
+          "parameters": {
+            "Happening": "Save",
+            "MarketSubType": "Dynamic",
+            "MarketType": "Scorer",
+            "Period": "RegularTime",
+            "Places": "4",
+            "Position": "Any"
+          },
+          "options": [
+            {
+              "id": 700430121,
+              "name": "Fábio Deivson Lopes Maciel",
+              "status": "Visible",
+              "code": null,
+              "price": {
+                "id": {
+                  "$numberLong": "2288865795"
+                },
+                "numerator": 11,
+                "denominator": 4,
+                "odds": 3.75,
+                "americanOdds": 275
+              },
+              "boostedPrice": {
+                "id": {
+                  "$numberLong": "2288865950"
+                },
+                "numerator": 31,
+                "denominator": 10,
+                "odds": 4.1,
+                "americanOdds": 310
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

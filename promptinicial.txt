@@ -1,0 +1,42 @@
+Com base no arquivo DocumentacaoContrato.md, quero que você crie um MICROSSERVIÇO em Java 21 com Maven usando arquitetura hexagonal.
+
+REQUISITOS GERAIS
+- O contrato definido em DocumentacaoContrato.md e nas classes em objectscontract  é LEI. Não altere o domínio nem crie novos enums além dos definidos ali.
+- Todos os JSONs das casas devem ser mapeados para esse contrato (UnifiedEvent, UnifiedMarket, UnifiedMarketOption, etc.).
+- Use os arquivos em references/ (commons, jsonsaidas, objectscontract) como REFERÊNCIA PRINCIPAL de modelo e exemplo.
+
+MICROSSERVIÇO
+- Expor um endpoint REST (ex: POST /events/refresh) que, ao ser chamado:
+  0) Com base nas scrappers referencias em python faça com que elas existam aqui nesse projeto em java, fazendo de para da logica e enquandrando no que precisamos
+  1) Dispare, em paralelo e com máxima performance, TODAS as scrappers implementadas em JAVA dentro deste projeto (uma por casa configurada).
+  2) Cada scrapper JAVA deve buscar os dados da sua casa e produzir um JSON bruto equivalente ao formato que hoje é retornado pelas scrapers em python-scrappers (estes arquivos Python servem APENAS como REFERÊNCIA de formato, não serão executados em produção).
+  3) A partir desse JSON bruto de cada casa, mapear para o objeto de domínio conhecido (UnifiedEvent e demais objetos do contrato).
+  4) Persistir os eventos normalizados em MongoDB, aplicando as regras de upsert/merge e descarte de mercados definidas em DocumentacaoContrato.md.
+
+MONGO / PERSISTÊNCIA
+- Conectar ao Mongo usando por padrão:
+  DEFAULT_MONGO_URI = "mongodb://flashscore:flashscore@31.220.90.232:27017/?authSource=admin&connectTimeoutMS=5000&serverSelectionTimeoutMS=5000"
+  DEFAULT_MONGO_DB = "flashscore"
+  DEFAULT_MONGO_COLLECTION = "betsv2"
+- Preferir ler URI/DB/COLLECTION de variáveis de ambiente, mantendo esses valores como default.
+- A collection betsv2 DEVE armazenar exatamente a saída do contrato unificado.
+- Para cada UnifiedEvent:
+  - Se o evento (normalizedId) não existir, criar.
+  - Se já existir, fazer upsert/merge de fontes e mercados, seguindo a lógica de merge do normalized_events.py (merge_normalized) e as regras de DocumentacaoContrato.md.
+  - Descartar QUALQUER mercado que não mapeie para um MarketType válido (regra 9 da doc).
+
+ARQUITETURA HEXAGONAL
+- Camada domínio: objetos do contrato (REPASSE PARA O CÓDIGO AS em objectscontract) + interfaces de portas (ex: EventRepository, ScraperGateway).
+- Camada aplicação: casos de uso (ex: RefreshEventsUseCase) que orquestram scrapers em paralelo, fazem o merge e chamam o repositório.
+- Camada infraestrutura:
+  - Implementação de EventRepository para MongoDB.
+  - Integração com scrapers Python (chamada de scripts, parsing de JSON).
+  - Configuração de REST (controlador) usando framework Java adequado (ex: Spring Boot).
+
+PARALELISMO
+- Executar as scrapers em paralelo (ExecutorService, CompletableFuture ou similar).
+- Tolerar falha de uma casa sem derrubar o fluxo das demais.
+- Retornar no endpoint um resumo com quantos eventos foram inseridos/atualizados por casa.
+
+LEMBRETE
+- DocumentacaoContrato.md é o CORAÇÃO do projeto. Antes de gerar ou alterar qualquer código, leia e siga esse documento e os objetos em objectscontract.
