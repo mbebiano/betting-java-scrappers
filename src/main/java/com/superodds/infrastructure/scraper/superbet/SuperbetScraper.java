@@ -45,7 +45,9 @@ public class SuperbetScraper implements ScraperGateway {
     private static final Map<String, String> HEADERS = Map.of(
         "accept", "application/json, text/plain, */*",
         "accept-language", "pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7",
-        "user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        "user-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36",
+        "origin", "https://superbet.com",
+        "referer", "https://superbet.com/"
     );
 
     @Override

@@ -36,14 +36,34 @@ public class HttpClientUtil {
             try (CloseableHttpResponse response = httpClient.execute(request)) {
                 int statusCode = response.getCode();
                 String responseBody;
+                String contentType = null;
+                
                 try {
                     responseBody = EntityUtils.toString(response.getEntity());
+                    if (response.getEntity() != null && response.getEntity().getContentType() != null) {
+                        contentType = response.getEntity().getContentType();
+                    }
                 } catch (org.apache.hc.core5.http.ParseException e) {
                     throw new IOException("Failed to parse response", e);
                 }
                 
                 if (statusCode >= 200 && statusCode < 300) {
-                    return objectMapper.readTree(responseBody);
+                    // Check if response is JSON before attempting to parse
+                    if (contentType != null && !contentType.toLowerCase().contains("json")) {
+                        logger.error("Expected JSON but received content-type: {}. URL: {}", contentType, url);
+                        logger.error("Response body (first 500 chars): {}", 
+                            responseBody.length() > 500 ? responseBody.substring(0, 500) : responseBody);
+                        throw new IOException("Expected JSON response but received: " + contentType);
+                    }
+                    
+                    try {
+                        return objectMapper.readTree(responseBody);
+                    } catch (com.fasterxml.jackson.core.JsonParseException e) {
+                        logger.error("Failed to parse JSON. URL: {}", url);
+                        logger.error("Response body (first 500 chars): {}", 
+                            responseBody.length() > 500 ? responseBody.substring(0, 500) : responseBody);
+                        throw new IOException("Failed to parse JSON response: " + e.getMessage(), e);
+                    }
                 } else {
                     logger.error("HTTP request failed with status {}: {}", statusCode, responseBody);
                     throw new IOException("HTTP request failed with status " + statusCode);
