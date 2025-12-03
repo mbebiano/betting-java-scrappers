@@ -78,27 +78,38 @@ Fully implemented with:
 - ✅ Static ObjectMapper for efficiency
 - ✅ Security notes for production configuration
 
-## What's Not Implemented
+## What's Implemented
 
-### Sportingbet Scraper
-Status: Placeholder only
+### All Three Scrapers
 
-To implement:
-1. Study `references/python-scrappers/sportingbetraw.py`
-2. Follow Superbet scraper pattern
-3. Map Sportingbet-specific markets to canonical types
-4. Implement outcome mapping
-5. Add tests
+**Superbet**, **Sportingbet**, and **BetMGM** scrapers are fully implemented with complete market mapping and normalization logic.
 
-### BetMGM Scraper
-Status: Placeholder only
+### Sportingbet Scraper ✅
+Status: Fully implemented
 
-To implement:
-1. Study `references/python-scrappers/betmgmraw.py`
-2. Follow Superbet scraper pattern
-3. Map BetMGM-specific markets to canonical types
-4. Implement outcome mapping
-5. Add tests
+Implemented based on `references/python-scrappers/sportingbetraw.py`:
+1. Fetches football competitions via /bettingoffer/counts endpoint
+2. Retrieves fixtures from each competition using CompetitionLobby widget
+3. Enriches fixtures with detailed markets via /bettingoffer/fixture-view
+4. Maps all supported market types (10 types including 3way, BTTS, DoubleChance, etc.)
+5. Normalizes outcomes with proper code mapping
+6. Handles price boost detection
+7. Supports parallel enrichment (configurable workers, default 8)
+8. Validates fixtures (sport ID, market availability, fixture type)
+9. Deduplicates events by fixture ID
+
+### BetMGM Scraper ✅
+Status: Fully implemented
+
+Implemented based on `references/python-scrappers/betmgmraw.py`:
+1. Uses GraphQL AllLeaguesPaginatedQuery to list football events
+2. Implements pagination to fetch all available events
+3. Enriches events with detailed markets from Kambi offering-api
+4. Maps Kambi criterion labels to 12+ canonical market types
+5. Handles all three odds formats (decimal, fractional, American)
+6. Supports parallel event enrichment (configurable workers, default 8)
+7. Deduplicates events by event ID
+8. Extracts participants from event name and Kambi API responses
 
 ## How to Use
 
@@ -180,29 +191,34 @@ Response:
 
 ## Next Steps
 
-To complete the implementation:
+The core implementation is complete. Optional enhancements:
 
-1. **Implement Sportingbet Scraper**
-   - Reference: `references/python-scrappers/sportingbetraw.py`
-   - Pattern: Follow `SuperbetScraper.java`
-   - Estimate: 4-6 hours
-
-2. **Implement BetMGM Scraper**
-   - Reference: `references/python-scrappers/betmgmraw.py`
-   - Pattern: Follow `SuperbetScraper.java`
-   - Estimate: 4-6 hours
-
-3. **Add Integration Tests**
+1. **Add Integration Tests**
    - Test MongoDB merge logic with real scenarios
    - Test error recovery
    - Test market mapping edge cases
+   - Mock HTTP responses for scraper unit tests
 
-4. **Production Hardening**
+2. **Production Hardening**
    - Add retry logic for HTTP requests
    - Add circuit breakers for external services
-   - Add metrics and monitoring
+   - Add metrics and monitoring (Prometheus/Micrometer)
    - Add health checks
    - Configure proper logging levels
+   - Add request rate limiting
+
+3. **Performance Optimization**
+   - Tune thread pool sizes
+   - Add connection pooling for HTTP clients
+   - Implement caching for repeated requests
+   - Add batch processing for MongoDB operations
+
+4. **Additional Features**
+   - Add filtering by hours/date range
+   - Add max events limit for debugging
+   - Add scraper enable/disable configuration
+   - Add scheduled scraping (Spring @Scheduled)
+   - Add scraping metrics endpoint
 
 ## Security Summary
 

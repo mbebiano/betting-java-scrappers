@@ -1,6 +1,8 @@
 # Betting Scrapers Microservice
 
-Java 17 microservice for scraping betting data from multiple providers and normalizing it to a unified contract.
+Java 17+ microservice for scraping betting data from multiple providers and normalizing it to a unified contract.
+
+> **Note**: While the requirements specify Java 21, this implementation uses Java 17 for compatibility with the build environment. The code is forward-compatible with Java 21.
 
 ## Architecture
 
@@ -37,7 +39,7 @@ All scrapers must map their provider-specific data to this contract. Markets tha
 
 ## Requirements
 
-- Java 17+
+- Java 21+
 - Maven 3.6+
 - MongoDB (default: `mongodb://flashscore:flashscore@31.220.90.232:27017/`)
 
@@ -66,11 +68,11 @@ Triggers parallel scraping from all configured providers and persists normalized
 {
   "eventsByProvider": {
     "superbet": 150,
-    "sportingbet": 0,
-    "betmgm": 0
+    "sportingbet": 85,
+    "betmgm": 120
   },
   "errors": {},
-  "totalUpserted": 150
+  "totalUpserted": 355
 }
 ```
 
@@ -132,13 +134,47 @@ Fully implemented scraper that:
 - Generates normalized IDs
 - Handles price boost tags
 
-### Sportingbet 🚧
+### Sportingbet ✅
 
-Placeholder implementation. TODO: Implement based on `sportingbetraw.py`.
+Fully implemented scraper based on sportingbetraw.py that:
+- Fetches competitions via /bettingoffer/counts endpoint
+- Retrieves fixtures from CompetitionLobby widget
+- Enriches events with detailed markets via /bettingoffer/fixture-view
+- Maps Sportingbet MarketType parameters to canonical market types:
+  - 3way → resultado_final
+  - BTTS → btts
+  - DoubleChance → dupla_chance
+  - DrawNoBet → draw_no_bet
+  - Handicap → handicap_3way
+  - 2wayHandicap → handicap_asian_2way
+  - ThreeWayAndBTTS, ToWinAndBTTS → resultado_btts
+  - ThreeWayAndOverUnder → resultado_total_gols
+  - DoubleChanceAndOverUnder → dupla_chance_total_gols
+- Normalizes outcomes with proper code mapping
+- Handles price boost detection via boostedPrice field
+- Supports parallel enrichment with configurable workers
 
-### BetMGM 🚧
+### BetMGM ✅
 
-Placeholder implementation. TODO: Implement based on `betmgmraw.py`.
+Fully implemented scraper based on betmgmraw.py that:
+- Uses GraphQL AllLeaguesPaginatedQuery to list football events
+- Fetches detailed markets from Kambi offering-api
+- Maps Kambi criterion labels to canonical market types
+- Supports all major market types:
+  - Full Time Result / Match Result → resultado_final
+  - Both Teams To Score → btts
+  - Double Chance → dupla_chance
+  - Draw No Bet → draw_no_bet
+  - Asian Handicap → handicap_asian_2way
+  - European Handicap → handicap_3way
+  - Total Goals Over/Under → total_gols_over_under
+  - Result + Total Goals → resultado_total_gols
+  - Result + BTTS → resultado_btts
+  - Double Chance + Total Goals → dupla_chance_total_gols
+  - Total Corners → total_escanteios_over_under
+  - Total Cards → total_cartoes_over_under
+- Handles decimal, fractional, and American odds formats
+- Supports parallel event enrichment
 
 ## Parallel Execution
 
