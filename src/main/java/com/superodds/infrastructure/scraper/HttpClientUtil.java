@@ -49,20 +49,23 @@ public class HttpClientUtil {
                 String responseBody;
                 String contentType = null;
                 
-                // Get content type from entity
-                if (response.getEntity() != null && response.getEntity().getContentType() != null) {
-                    contentType = response.getEntity().getContentType();
+                // Get content type from entity before consuming it
+                org.apache.hc.core5.http.HttpEntity entity = response.getEntity();
+                if (entity != null && entity.getContentType() != null) {
+                    contentType = entity.getContentType();
                 }
                 
                 try {
-                    responseBody = EntityUtils.toString(response.getEntity());
+                    responseBody = EntityUtils.toString(entity);
                 } catch (org.apache.hc.core5.http.ParseException e) {
                     throw new IOException("Failed to parse response", e);
                 }
                 
                 if (statusCode >= 200 && statusCode < 300) {
                     // Check if response is JSON before attempting to parse
-                    if (contentType != null && !contentType.toLowerCase().startsWith("application/json")) {
+                    // If content-type is null or empty, we'll still try to parse as JSON
+                    if (contentType != null && !contentType.isEmpty() 
+                        && !contentType.toLowerCase().startsWith("application/json")) {
                         logger.error("Expected JSON but received content-type: {}. URL: {}", contentType, url);
                         logResponseBodyPreview(responseBody);
                         throw new IOException("Expected JSON response but received: " + contentType);
