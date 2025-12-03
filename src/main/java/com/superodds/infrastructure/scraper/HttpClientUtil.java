@@ -6,6 +6,7 @@ import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpResponse;
 import org.apache.hc.client5.http.impl.classic.HttpClients;
+import org.apache.hc.core5.http.HttpEntity;
 import org.apache.hc.core5.http.io.entity.EntityUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,7 +51,7 @@ public class HttpClientUtil {
                 String contentType = null;
                 
                 // Get content type from entity before consuming it
-                org.apache.hc.core5.http.HttpEntity entity = response.getEntity();
+                HttpEntity entity = response.getEntity();
                 if (entity != null && entity.getContentType() != null) {
                     contentType = entity.getContentType();
                 }
