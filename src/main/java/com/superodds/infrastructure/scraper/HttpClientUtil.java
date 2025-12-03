@@ -20,6 +20,17 @@ public class HttpClientUtil {
 
     private static final Logger logger = LoggerFactory.getLogger(HttpClientUtil.class);
     private static final ObjectMapper objectMapper = new ObjectMapper();
+    private static final int MAX_LOG_BODY_LENGTH = 500;
+
+    /**
+     * Helper method to log response body preview for debugging.
+     */
+    private static void logResponseBodyPreview(String responseBody) {
+        String preview = responseBody.length() > MAX_LOG_BODY_LENGTH 
+            ? responseBody.substring(0, MAX_LOG_BODY_LENGTH) + "..." 
+            : responseBody;
+        logger.error("Response body preview: {}", preview);
+    }
 
     /**
      * Makes a GET request and returns the response as JsonNode.
@@ -51,10 +62,9 @@ public class HttpClientUtil {
                 
                 if (statusCode >= 200 && statusCode < 300) {
                     // Check if response is JSON before attempting to parse
-                    if (contentType != null && !contentType.toLowerCase().contains("json")) {
+                    if (contentType != null && !contentType.toLowerCase().startsWith("application/json")) {
                         logger.error("Expected JSON but received content-type: {}. URL: {}", contentType, url);
-                        logger.error("Response body (first 500 chars): {}", 
-                            responseBody.length() > 500 ? responseBody.substring(0, 500) : responseBody);
+                        logResponseBodyPreview(responseBody);
                         throw new IOException("Expected JSON response but received: " + contentType);
                     }
                     
@@ -62,8 +72,7 @@ public class HttpClientUtil {
                         return objectMapper.readTree(responseBody);
                     } catch (com.fasterxml.jackson.core.JsonParseException e) {
                         logger.error("Failed to parse JSON. URL: {}", url);
-                        logger.error("Response body (first 500 chars): {}", 
-                            responseBody.length() > 500 ? responseBody.substring(0, 500) : responseBody);
+                        logResponseBodyPreview(responseBody);
                         throw new IOException("Failed to parse JSON response: " + e.getMessage(), e);
                     }
                 } else {
