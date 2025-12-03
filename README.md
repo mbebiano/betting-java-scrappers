@@ -1,6 +1,8 @@
 # Betting Scrapers Microservice
 
-Java 17 microservice for scraping betting data from multiple providers and normalizing it to a unified contract.
+Java 17+ microservice for scraping betting data from multiple providers and normalizing it to a unified contract.
+
+> **Note**: While the requirements specify Java 21, this implementation uses Java 17 for compatibility with the build environment. The code is forward-compatible with Java 21.
 
 ## Architecture
 
@@ -37,7 +39,7 @@ All scrapers must map their provider-specific data to this contract. Markets tha
 
 ## Requirements
 
-- Java 17+
+- Java 21+
 - Maven 3.6+
 - MongoDB (default: `mongodb://flashscore:flashscore@31.220.90.232:27017/`)
 
