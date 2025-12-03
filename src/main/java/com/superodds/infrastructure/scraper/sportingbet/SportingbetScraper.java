@@ -368,9 +368,15 @@ public class SportingbetScraper implements ScraperGateway {
         }
         
         if (home == null || away == null) {
-            // Fallback: use first two participants
-            home = participants.get(0).has("name") ? participants.get(0).get("name").asText() : "Home";
-            away = participants.get(1).has("name") ? participants.get(1).get("name").asText() : "Away";
+            // Fallback: use first two participants if available
+            if (participants.size() >= 2) {
+                home = participants.get(0).has("name") ? participants.get(0).get("name").asText() : "Home";
+                away = participants.get(1).has("name") ? participants.get(1).get("name").asText() : "Away";
+            } else {
+                // Cannot determine participants - skip this fixture
+                logger.warn("Cannot determine home/away participants for fixture");
+                return null;
+            }
         }
         
         // Extract basic info
@@ -381,8 +387,36 @@ public class SportingbetScraper implements ScraperGateway {
         String startDateStr = fixture.has("startDate") ? fixture.get("startDate").asText() : null;
         String cutOffDateStr = fixture.has("cutOffDate") ? fixture.get("cutOffDate").asText() : startDateStr;
         
-        Instant startDate = startDateStr != null ? Instant.parse(startDateStr.replace("Z", "+00:00").replace(" ", "T")) : Instant.now();
-        Instant cutOffDate = cutOffDateStr != null ? Instant.parse(cutOffDateStr.replace("Z", "+00:00").replace(" ", "T")) : startDate;
+        Instant startDate = Instant.now();
+        Instant cutOffDate = Instant.now();
+        
+        if (startDateStr != null) {
+            try {
+                // Handle various ISO formats
+                String normalized = startDateStr.replace(" ", "T");
+                if (!normalized.endsWith("Z") && !normalized.contains("+")) {
+                    normalized += "Z";
+                }
+                startDate = Instant.parse(normalized);
+            } catch (Exception e) {
+                logger.warn("Failed to parse startDate '{}', using current time", startDateStr);
+            }
+        }
+        
+        if (cutOffDateStr != null) {
+            try {
+                String normalized = cutOffDateStr.replace(" ", "T");
+                if (!normalized.endsWith("Z") && !normalized.contains("+")) {
+                    normalized += "Z";
+                }
+                cutOffDate = Instant.parse(normalized);
+            } catch (Exception e) {
+                logger.warn("Failed to parse cutOffDate '{}', using startDate", cutOffDateStr);
+                cutOffDate = startDate;
+            }
+        } else {
+            cutOffDate = startDate;
+        }
         
         // Create event metadata
         EventMeta eventMeta = new EventMeta();

@@ -48,6 +48,10 @@ public class BetMGMScraper implements ScraperGateway {
     private static final String PERSISTED_QUERY_HASH = 
         "b858aece8798aeb4f1d93bfd29d95ac3dc0932f609a1710dd2d55bd5988eb954";
     
+    // Pattern for splitting event names
+    private static final java.util.regex.Pattern EVENT_NAME_PATTERN = 
+        java.util.regex.Pattern.compile(" v | vs | x ");
+    
     private static final Map<String, String> GRAPHQL_HEADERS = Map.of(
         "content-type", "application/json",
         "x-app-id", "sportsbook",
@@ -291,7 +295,7 @@ public class BetMGMScraper implements ScraperGateway {
                           enrichedEvent.has("englishName") ? enrichedEvent.get("englishName").asText() : "";
         
         // Parse participants from event name (e.g., "Team A v Team B")
-        String[] parts = eventName.split(" v | vs | x ", 2);
+        String[] parts = EVENT_NAME_PATTERN.split(eventName, 2);
         String home = parts.length > 0 ? parts[0].trim() : "Home";
         String away = parts.length > 1 ? parts[1].trim() : "Away";
         
