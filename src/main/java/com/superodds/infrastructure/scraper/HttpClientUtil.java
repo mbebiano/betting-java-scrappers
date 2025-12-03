@@ -38,11 +38,13 @@ public class HttpClientUtil {
                 String responseBody;
                 String contentType = null;
                 
+                // Get content type from entity
+                if (response.getEntity() != null && response.getEntity().getContentType() != null) {
+                    contentType = response.getEntity().getContentType();
+                }
+                
                 try {
                     responseBody = EntityUtils.toString(response.getEntity());
-                    if (response.getEntity() != null && response.getEntity().getContentType() != null) {
-                        contentType = response.getEntity().getContentType();
-                    }
                 } catch (org.apache.hc.core5.http.ParseException e) {
                     throw new IOException("Failed to parse response", e);
                 }
