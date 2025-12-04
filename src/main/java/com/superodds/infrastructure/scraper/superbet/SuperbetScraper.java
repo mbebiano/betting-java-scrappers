@@ -15,6 +15,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 /**
  * Scraper implementation for Superbet.
@@ -28,6 +30,7 @@ public class SuperbetScraper implements ScraperGateway {
     private static final String BASE_URL = "https://superbet.com/api/widget";
     private static final int SPORT_ID = 5; // Football
     private static final int DAYS = 3;
+    private static final int MAX_WORKERS = 8; // Match Python implementation
     
     // Market IDs that we want to scrape
     private static final List<Integer> MARKET_IDS = List.of(
@@ -79,8 +82,6 @@ public class SuperbetScraper implements ScraperGateway {
     }
 
     private List<JsonNode> fetchEvents() throws Exception {
-        List<JsonNode> allEvents = new ArrayList<>();
-        
         // Calculate date range
         LocalDateTime now = LocalDateTime.now(ZoneOffset.UTC);
         LocalDateTime endDate = now.plusDays(DAYS);
@@ -88,7 +89,7 @@ public class SuperbetScraper implements ScraperGateway {
         String startDateStr = now.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         String endDateStr = endDate.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME);
         
-        // Fetch events list
+        // Fetch events list (lightweight)
         String url = BASE_URL + "/v2/pt-BR/sports/" + SPORT_ID + "/events";
         Map<String, String> params = Map.of(
             "from", startDateStr,
@@ -97,24 +98,84 @@ public class SuperbetScraper implements ScraperGateway {
         
         JsonNode response = HttpClientUtil.getJson(url, params, HEADERS);
         
-        if (response.has("data") && response.get("data").isArray()) {
-            JsonNode events = response.get("data");
-            
-            // For each event, fetch full details
-            for (JsonNode event : events) {
-                String eventId = event.get("eventId").asText();
-                try {
-                    JsonNode fullEvent = fetchEventDetails(eventId);
-                    if (fullEvent != null) {
-                        allEvents.add(fullEvent);
-                    }
-                } catch (Exception e) {
-                    logger.error("Error fetching event details for {}", eventId, e);
-                }
+        if (!response.has("data") || !response.get("data").isArray()) {
+            logger.warn("No events data in response");
+            return List.of();
+        }
+        
+        JsonNode eventsArray = response.get("data");
+        List<String> eventIds = new ArrayList<>();
+        for (JsonNode event : eventsArray) {
+            if (event.has("eventId")) {
+                eventIds.add(event.get("eventId").asText());
             }
         }
         
-        return allEvents;
+        logger.info("Found {} events to enrich", eventIds.size());
+        
+        // Enrich events in parallel (matching Python implementation)
+        return enrichEventsInParallel(eventIds);
+    }
+
+    /**
+     * Enriches events in parallel using ThreadPoolExecutor.
+     * Matches Python implementation: enrich_events_with_markets() with max_workers=8
+     */
+    private List<JsonNode> enrichEventsInParallel(List<String> eventIds) {
+        if (eventIds.isEmpty()) {
+            return List.of();
+        }
+        
+        List<JsonNode> enrichedEvents = new CopyOnWriteArrayList<>();
+        ExecutorService executor = Executors.newFixedThreadPool(Math.min(MAX_WORKERS, eventIds.size()));
+        
+        try {
+            List<CompletableFuture<Void>> futures = new ArrayList<>();
+            
+            for (String eventId : eventIds) {
+                CompletableFuture<Void> future = CompletableFuture.runAsync(() -> {
+                    try {
+                        JsonNode fullEvent = fetchEventDetails(eventId);
+                        if (fullEvent != null) {
+                            enrichedEvents.add(fullEvent);
+                        }
+                    } catch (Exception e) {
+                        logger.warn("Failed to enrich event {}: {}", eventId, e.getMessage());
+                    }
+                }, executor);
+                
+                futures.add(future);
+            }
+            
+            // Wait for all enrichment tasks to complete with timeout
+            try {
+                CompletableFuture.allOf(futures.toArray(new CompletableFuture[0]))
+                    .get(120, TimeUnit.SECONDS); // 2 minute timeout for all enrichments
+            } catch (TimeoutException e) {
+                logger.warn("Event enrichment timed out after 120 seconds");
+            } catch (ExecutionException e) {
+                logger.error("Error during parallel event enrichment", e);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                logger.warn("Event enrichment interrupted");
+            }
+            
+            logger.info("Successfully enriched {}/{} events in parallel", enrichedEvents.size(), eventIds.size());
+            
+        } finally {
+            executor.shutdown();
+            try {
+                if (!executor.awaitTermination(30, TimeUnit.SECONDS)) {
+                    logger.warn("Executor did not terminate in time, forcing shutdown");
+                    executor.shutdownNow();
+                }
+            } catch (InterruptedException e) {
+                executor.shutdownNow();
+                Thread.currentThread().interrupt();
+            }
+        }
+        
+        return new ArrayList<>(enrichedEvents);
     }
 
     private JsonNode fetchEventDetails(String eventId) throws Exception {
