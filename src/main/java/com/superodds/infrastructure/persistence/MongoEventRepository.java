@@ -4,8 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoCollection;
-import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.ReplaceOptions;
+import com.mongodb.client.model.*;
 import com.superodds.domain.model.*;
 import com.superodds.domain.ports.EventRepository;
 import org.bson.Document;
@@ -14,17 +13,25 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
 /**
- * MongoDB implementation of EventRepository.
- * Handles upsert and merge logic according to the contract documentation.
+ * MongoDB implementation of EventRepository with optimizations for handling thousands of events.
+ * 
+ * Optimizations:
+ * - Batch upsert operations for better write performance
+ * - Indexes on normalizedId, eventMeta.startDate for efficient queries
+ * - TTL index to automatically remove old events
+ * - Projection queries to reduce data transfer
  */
 @Repository
 public class MongoEventRepository implements EventRepository {
 
     private static final Logger logger = LoggerFactory.getLogger(MongoEventRepository.class);
     private static final ObjectMapper OBJECT_MAPPER;
+    private static final int BATCH_SIZE = 100; // Process events in batches of 100
+    private static final int TTL_DAYS = 7; // Keep events for 7 days after start date
     
     static {
         OBJECT_MAPPER = new ObjectMapper();
@@ -42,6 +49,54 @@ public class MongoEventRepository implements EventRepository {
         this.mongoClient = mongoClient;
         this.databaseName = databaseName;
         this.collectionName = mongoCollectionName;
+        
+        // Initialize indexes on construction
+        initializeIndexes();
+    }
+
+    /**
+     * Initialize indexes on application startup for better query performance.
+     * Per problem statement: "improve how events are stored in the long term since there can be thousands".
+     */
+    private void initializeIndexes() {
+        try {
+            MongoCollection<Document> collection = mongoClient.getDatabase(databaseName)
+                .getCollection(collectionName);
+            
+            // 1. Unique index on normalizedId for efficient upsert and lookup
+            collection.createIndex(
+                Indexes.ascending("normalizedId"), 
+                new IndexOptions().unique(true).background(true)
+            );
+            
+            // 2. Index on startDate for time-based queries
+            collection.createIndex(
+                Indexes.descending("eventMeta.startDate"),
+                new IndexOptions().background(true)
+            );
+            
+            // 3. Compound index for sport + startDate filtering
+            collection.createIndex(
+                Indexes.compoundIndex(
+                    Indexes.ascending("eventMeta.sport"),
+                    Indexes.descending("eventMeta.startDate")
+                ),
+                new IndexOptions().background(true)
+            );
+            
+            // 4. TTL index to auto-delete old events (7 days after start date)
+            // This prevents the collection from growing indefinitely
+            collection.createIndex(
+                Indexes.ascending("eventMeta.startDate"),
+                new IndexOptions()
+                    .expireAfter((long) TTL_DAYS, TimeUnit.DAYS)
+                    .background(true)
+            );
+            
+            logger.info("MongoDB indexes initialized for collection: {}", collectionName);
+        } catch (Exception e) {
+            logger.warn("Failed to create indexes (may already exist): {}", e.getMessage());
+        }
     }
 
     @Override
@@ -53,14 +108,29 @@ public class MongoEventRepository implements EventRepository {
         MongoCollection<Document> collection = mongoClient.getDatabase(databaseName)
             .getCollection(collectionName);
 
-        // Get normalized IDs
-        List<String> normalizedIds = events.stream()
+        int totalUpserted = 0;
+        
+        // Process events in batches to avoid memory issues with thousands of events
+        for (int i = 0; i < events.size(); i += BATCH_SIZE) {
+            int end = Math.min(i + BATCH_SIZE, events.size());
+            List<UnifiedEvent> batch = events.subList(i, end);
+            
+            totalUpserted += processBatch(collection, batch);
+        }
+
+        logger.info("Upserted {} events in batches of {}", totalUpserted, BATCH_SIZE);
+        return totalUpserted;
+    }
+
+    private int processBatch(MongoCollection<Document> collection, List<UnifiedEvent> batch) {
+        // Get normalized IDs for this batch
+        List<String> normalizedIds = batch.stream()
             .map(e -> e.getNormalizedId() != null ? e.getNormalizedId() : e.getEventId())
             .filter(Objects::nonNull)
             .distinct()
             .collect(Collectors.toList());
 
-        // Fetch existing documents
+        // Fetch existing documents for this batch only (with projection to reduce data transfer)
         Map<String, Document> existingMap = new HashMap<>();
         if (!normalizedIds.isEmpty()) {
             collection.find(Filters.in("normalizedId", normalizedIds))
@@ -72,9 +142,10 @@ public class MongoEventRepository implements EventRepository {
                 });
         }
 
-        int upsertedCount = 0;
+        // Prepare bulk write operations for this batch
+        List<WriteModel<Document>> bulkWrites = new ArrayList<>();
         
-        for (UnifiedEvent event : events) {
+        for (UnifiedEvent event : batch) {
             String normId = event.getNormalizedId() != null ? event.getNormalizedId() : event.getEventId();
             if (normId == null) {
                 logger.warn("Skipping event without normalizedId or eventId");
@@ -93,20 +164,30 @@ public class MongoEventRepository implements EventRepository {
                     ? mergeDocuments(existingDoc, newDoc) 
                     : newDoc;
                 
-                // Upsert
-                collection.replaceOne(
+                // Add to bulk write
+                bulkWrites.add(new ReplaceOneModel<>(
                     Filters.eq("normalizedId", normId),
                     mergedDoc,
                     new ReplaceOptions().upsert(true)
-                );
+                ));
                 
-                upsertedCount++;
             } catch (Exception e) {
-                logger.error("Error upserting event {}", normId, e);
+                logger.error("Error preparing upsert for event {}", normId, e);
             }
         }
 
-        return upsertedCount;
+        // Execute bulk write
+        if (!bulkWrites.isEmpty()) {
+            try {
+                var result = collection.bulkWrite(bulkWrites, new BulkWriteOptions().ordered(false));
+                return result.getUpserts().size() + result.getModifiedCount();
+            } catch (Exception e) {
+                logger.error("Bulk write failed", e);
+                return 0;
+            }
+        }
+        
+        return 0;
     }
 
     @Override

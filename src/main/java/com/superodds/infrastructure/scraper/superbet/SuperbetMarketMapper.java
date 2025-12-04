@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
 public class SuperbetMarketMapper {
 
     private static final Pattern LINE_PATTERN = Pattern.compile("\\((\\d+\\.?\\d*)\\)");
+    private static final Pattern HANDICAP_PATTERN = Pattern.compile("\\(([+-]?\\d+\\.\\d+)\\)");
 
     public record MarketMapping(
         MarketType marketType,
@@ -24,6 +25,7 @@ public class SuperbetMarketMapper {
 
     /**
      * Maps Superbet market ID and name to canonical market type.
+     * Per mapping doc, extracts lines from market names using regex.
      */
     public static MarketMapping mapMarket(int marketId, String marketName) {
         return switch (marketId) {
@@ -62,7 +64,7 @@ public class SuperbetMarketMapper {
             case 546 -> new MarketMapping(
                 MarketType.HANDICAP_3WAY,
                 PeriodType.REGULAR_TIME,
-                null,
+                extractLineFromName(marketName),  // Extract line for handicap
                 HappeningType.GOALS,
                 null,
                 null
@@ -70,7 +72,7 @@ public class SuperbetMarketMapper {
             case 530 -> new MarketMapping(
                 MarketType.HANDICAP_ASIAN_2WAY,
                 PeriodType.REGULAR_TIME,
-                null,
+                null,  // Line will be extracted from option name (e.g., "Palmeiras (-0.75)")
                 HappeningType.GOALS,
                 null,
                 null
@@ -111,6 +113,7 @@ public class SuperbetMarketMapper {
 
     /**
      * Maps Superbet option name to canonical outcome type.
+     * Per mapping doc, some markets like Draw No Bet use team names in option name.
      */
     public static OutcomeType mapOutcome(int marketId, String marketName, String optionName) {
         return switch (marketId) {
@@ -134,13 +137,23 @@ public class SuperbetMarketMapper {
                     case "12" -> OutcomeType.HOME_OR_AWAY;
                     default -> OutcomeType.OTHER;
                 };
-            case 555 -> // Empate Anula Aposta
-                // Option name is team name, we need to map based on position or code
-                // The first option is typically HOME (1), the second is AWAY (2)
-                // In practice, should check against the team names from event data
-                optionName.contains("1") || optionName.toLowerCase().contains("home") ? OutcomeType.HOME : 
-                optionName.contains("2") || optionName.toLowerCase().contains("away") ? OutcomeType.AWAY : 
+            case 555 -> // Empate Anula Aposta - uses team names
+                // Per mapping doc line 148-150, need to check if option contains team name
+                // Since we don't have team names here, check for "1" or "2" in the name
+                // Or look at first vs second option - first is HOME, second is AWAY
+                optionName.contains("1") ? OutcomeType.HOME : 
+                optionName.contains("2") ? OutcomeType.AWAY : 
                 OutcomeType.OTHER;
+            case 546 -> // Handicap 3-way - uses team names and handicap values
+                optionName.contains("Empate") || optionName.contains("X") ? OutcomeType.DRAW_HCP :
+                optionName.contains("1") || optionName.contains("(") && optionName.startsWith("1") ? OutcomeType.HOME_HCP :
+                optionName.contains("2") || optionName.contains("(") && optionName.startsWith("2") ? OutcomeType.AWAY_HCP :
+                OutcomeType.OTHER;
+            case 530 -> // Handicap Asiático - per mapping doc line 163-166, extract from option name
+                // Example: "Palmeiras (-0.75)" → HOME_HANDICAP, "Flamengo (0.75)" → AWAY_HANDICAP
+                // First option is usually HOME, second is AWAY
+                optionName.contains("(") && (optionName.contains("-") || optionName.indexOf('(') < optionName.length() / 2) ? 
+                    OutcomeType.HOME_HANDICAP : OutcomeType.AWAY_HANDICAP;
             case 532 -> // Resultado Final & Ambas Marcam
                 mapResultadoBttsOutcome(optionName);
             case 542 -> // Dupla Chance & Total de Gols
@@ -149,6 +162,24 @@ public class SuperbetMarketMapper {
                 mapResultadoTotalGolsOutcome(optionName);
             default -> OutcomeType.OTHER;
         };
+    }
+    
+    /**
+     * Extracts handicap line from option name.
+     * Per mapping doc line 102-105, examples: "Palmeiras (-0.75)" → -0.75
+     */
+    public static BigDecimal extractHandicapLine(String optionName) {
+        if (optionName == null) return null;
+        
+        Matcher matcher = HANDICAP_PATTERN.matcher(optionName);
+        if (matcher.find()) {
+            try {
+                return new BigDecimal(matcher.group(1));
+            } catch (NumberFormatException e) {
+                return null;
+            }
+        }
+        return null;
     }
 
     private static OutcomeType mapResultadoBttsOutcome(String optionName) {

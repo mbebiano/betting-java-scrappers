@@ -26,6 +26,7 @@ public class SportingbetMarketMapper {
 
     /**
      * Maps Sportingbet MarketType parameter to canonical market type.
+     * Based on mapping_sportingbet_to_unified.md reference.
      */
     public static MarketMapping mapMarket(Map<String, String> parameters, String marketName) {
         String marketType = parameters.getOrDefault("MarketType", "");
@@ -34,7 +35,7 @@ public class SportingbetMarketMapper {
         String rangeValue = parameters.getOrDefault("RangeValue", "");
         
         PeriodType periodType = mapPeriod(period);
-        BigDecimal line = extractLine(rangeValue, marketName);
+        BigDecimal line = extractLine(rangeValue, parameters, marketName);
         
         return switch (marketType) {
             case "3way" -> {
@@ -137,7 +138,25 @@ public class SportingbetMarketMapper {
         };
     }
 
-    private static BigDecimal extractLine(String rangeValue, String marketName) {
+    private static BigDecimal extractLine(String rangeValue, Map<String, String> parameters, String marketName) {
+        // Per mapping doc line 126-129, DecimalValue and Handicap parameters contain line values
+        if (parameters.containsKey("DecimalValue")) {
+            try {
+                return new BigDecimal(parameters.get("DecimalValue").replace(",", "."));
+            } catch (NumberFormatException e) {
+                // Ignore
+            }
+        }
+        
+        if (parameters.containsKey("Handicap")) {
+            try {
+                return new BigDecimal(parameters.get("Handicap").replace(",", "."));
+            } catch (NumberFormatException e) {
+                // Ignore
+            }
+        }
+        
+        // Fallback to RangeValue
         if (rangeValue != null && !rangeValue.isEmpty()) {
             try {
                 return new BigDecimal(rangeValue.replace(",", "."));
