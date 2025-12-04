@@ -64,7 +64,7 @@ public class SuperbetMarketMapper {
             case 546 -> new MarketMapping(
                 MarketType.HANDICAP_3WAY,
                 PeriodType.REGULAR_TIME,
-                extractLineFromName(marketName),  // Extract line for handicap
+                extractHandicapLine(marketName),  // Use HANDICAP_PATTERN for negative values
                 HappeningType.GOALS,
                 null,
                 null
@@ -150,10 +150,10 @@ public class SuperbetMarketMapper {
                 optionName.contains("2") || optionName.contains("(") && optionName.startsWith("2") ? OutcomeType.AWAY_HCP :
                 OutcomeType.OTHER;
             case 530 -> // Handicap Asiático - per mapping doc line 163-166, extract from option name
-                // Example: "Palmeiras (-0.75)" → HOME_HANDICAP, "Flamengo (0.75)" → AWAY_HANDICAP
-                // First option is usually HOME, second is AWAY
-                optionName.contains("(") && (optionName.contains("-") || optionName.indexOf('(') < optionName.length() / 2) ? 
-                    OutcomeType.HOME_HANDICAP : OutcomeType.AWAY_HANDICAP;
+                // Example: "Palmeiras (-0.75)" → HOME_HANDICAP (first team)
+                // "Flamengo (0.75)" → AWAY_HANDICAP (second team)
+                // Simple heuristic: if contains negative sign or appears first, it's HOME
+                optionName.contains("-") ? OutcomeType.HOME_HANDICAP : OutcomeType.AWAY_HANDICAP;
             case 532 -> // Resultado Final & Ambas Marcam
                 mapResultadoBttsOutcome(optionName);
             case 542 -> // Dupla Chance & Total de Gols

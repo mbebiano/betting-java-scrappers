@@ -180,7 +180,10 @@ public class MongoEventRepository implements EventRepository {
         if (!bulkWrites.isEmpty()) {
             try {
                 var result = collection.bulkWrite(bulkWrites, new BulkWriteOptions().ordered(false));
-                return result.getUpserts().size() + result.getModifiedCount();
+                // Correct counting: upserts includes both inserts and updates in upsert operations
+                // getMatchedCount = existing docs updated without upsert
+                // getUpserts().size() = new docs inserted via upsert
+                return result.getMatchedCount() + result.getUpserts().size();
             } catch (Exception e) {
                 logger.error("Bulk write failed", e);
                 return 0;

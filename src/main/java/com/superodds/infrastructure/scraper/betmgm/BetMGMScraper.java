@@ -454,13 +454,15 @@ public class BetMGMScraper implements ScraperGateway {
         
         // Calculate updatedAt from max changedDate (per mapping doc line 64-66)
         Instant maxChangedDate = Instant.now();
+        boolean hasChangedDate = false;
         if (betOffer.has("outcomes") && betOffer.get("outcomes").isArray()) {
             for (JsonNode outcome : betOffer.get("outcomes")) {
                 if (outcome.has("changedDate")) {
                     try {
                         Instant changedDate = Instant.parse(outcome.get("changedDate").asText());
-                        if (changedDate.isAfter(maxChangedDate)) {
+                        if (!hasChangedDate || changedDate.isAfter(maxChangedDate)) {
                             maxChangedDate = changedDate;
+                            hasChangedDate = true;
                         }
                     } catch (Exception e) {
                         // Ignore parse errors
@@ -468,6 +470,7 @@ public class BetMGMScraper implements ScraperGateway {
                 }
             }
         }
+        // If no changedDate found, use current time as fallback
         market.setUpdatedAt(maxChangedDate);
         
         // Process outcomes
