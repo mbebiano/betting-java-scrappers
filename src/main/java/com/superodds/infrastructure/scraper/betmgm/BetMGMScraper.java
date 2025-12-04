@@ -345,14 +345,37 @@ public class BetMGMScraper implements ScraperGateway {
         // Generate normalized ID
         String normalizedId = NormalizationUtils.generateNormalizedId(sport, startDate, home, away);
         
-        // Create source snapshot
-        String eventId = event.has("id") ? event.get("id").asText() :
+        // Create source snapshot (per mapping doc lines 58-66)
+        String eventId = event.has("id") ? String.valueOf(event.get("id").asLong()) :
                         enrichedEvent.has("id") ? enrichedEvent.get("id").asText() : "";
+        
+        // Calculate updatedAt from max changedDate of all outcomes (per mapping doc line 64-66)
+        Instant capturedAt = Instant.now();
+        Instant updatedAt = capturedAt;
+        
+        if (raw.has("betOffers") && raw.get("betOffers").isArray()) {
+            for (JsonNode betOffer : raw.get("betOffers")) {
+                if (betOffer.has("outcomes") && betOffer.get("outcomes").isArray()) {
+                    for (JsonNode outcome : betOffer.get("outcomes")) {
+                        if (outcome.has("changedDate")) {
+                            try {
+                                Instant changedDate = Instant.parse(outcome.get("changedDate").asText());
+                                if (changedDate.isAfter(updatedAt)) {
+                                    updatedAt = changedDate;
+                                }
+                            } catch (Exception e) {
+                                // Ignore parse errors
+                            }
+                        }
+                    }
+                }
+            }
+        }
         
         SourceSnapshot sourceSnapshot = new SourceSnapshot();
         sourceSnapshot.setEventSourceId(eventId);
-        sourceSnapshot.setCapturedAt(Instant.now());
-        sourceSnapshot.setUpdatedAt(Instant.now());
+        sourceSnapshot.setCapturedAt(capturedAt);
+        sourceSnapshot.setUpdatedAt(updatedAt);
         
         // Process markets
         List<UnifiedMarket> markets = new ArrayList<>();
@@ -396,6 +419,19 @@ public class BetMGMScraper implements ScraperGateway {
         
         String label = betOffer.has("label") ? betOffer.get("label").asText() : "";
         
+        // Extract line from outcomes if present (per mapping doc line 108-112)
+        // For bet offers with line in outcomes, divide by 1000 (e.g., 7500 → 7.5)
+        BigDecimal extractedLine = null;
+        if (betOffer.has("outcomes") && betOffer.get("outcomes").isArray()) {
+            for (JsonNode outcome : betOffer.get("outcomes")) {
+                if (outcome.has("line") && outcome.get("line").isInt()) {
+                    int lineInt = outcome.get("line").asInt();
+                    extractedLine = new BigDecimal(lineInt).divide(new BigDecimal(1000), 3, java.math.RoundingMode.HALF_UP);
+                    break; // Use first found line
+                }
+            }
+        }
+        
         // Map to canonical market
         BetMGMMarketMapper.MarketMapping mapping = 
             BetMGMMarketMapper.mapMarket(criterionLabel, label, betOfferType);
@@ -404,15 +440,38 @@ public class BetMGMScraper implements ScraperGateway {
             return null; // Discard unmapped markets (Rule 9)
         }
         
+        // Use extracted line if available, otherwise use mapper's line
+        BigDecimal finalLine = extractedLine != null ? extractedLine : mapping.line();
+        
         // Create unified market
         UnifiedMarket market = new UnifiedMarket();
         market.setMarketCanonical(mapping.marketType());
         market.setPeriod(mapping.period());
-        market.setLine(mapping.line());
+        market.setLine(finalLine);
         market.setHappening(mapping.happening());
         market.setParticipant(mapping.participant());
         market.setInterval(mapping.interval());
-        market.setUpdatedAt(Instant.now());
+        
+        // Calculate updatedAt from max changedDate (per mapping doc line 64-66)
+        Instant maxChangedDate = Instant.now();
+        boolean hasChangedDate = false;
+        if (betOffer.has("outcomes") && betOffer.get("outcomes").isArray()) {
+            for (JsonNode outcome : betOffer.get("outcomes")) {
+                if (outcome.has("changedDate")) {
+                    try {
+                        Instant changedDate = Instant.parse(outcome.get("changedDate").asText());
+                        if (!hasChangedDate || changedDate.isAfter(maxChangedDate)) {
+                            maxChangedDate = changedDate;
+                            hasChangedDate = true;
+                        }
+                    } catch (Exception e) {
+                        // Ignore parse errors
+                    }
+                }
+            }
+        }
+        // If no changedDate found, use current time as fallback
+        market.setUpdatedAt(maxChangedDate);
         
         // Process outcomes
         List<UnifiedMarketOption> options = new ArrayList<>();
@@ -434,34 +493,31 @@ public class BetMGMScraper implements ScraperGateway {
     }
 
     private UnifiedMarketOption normalizeOutcome(JsonNode outcome, String criterionLabel, MarketType marketType) {
-        String outcomeLabel = outcome.has("label") ? outcome.get("label").asText() : "";
+        String outcomeLabel = outcome.has("label") ? outcome.get("label").asText() : 
+                             outcome.has("englishLabel") ? outcome.get("englishLabel").asText() : "";
         
         OutcomeType outcomeType = BetMGMMarketMapper.mapOutcome(outcomeLabel, criterionLabel, marketType);
         if (outcomeType == null) {
             return null;
         }
         
-        // Get odds
+        // Get odds - BetMGM uses odds * 1000, so need to divide by 1000
         BigDecimal oddsDecimal = null;
         String oddsFractional = null;
         String oddsAmerican = null;
         
-        if (outcome.has("odds")) {
-            JsonNode odds = outcome.get("odds");
-            if (odds.has("decimal")) {
-                oddsDecimal = new BigDecimal(odds.get("decimal").asText());
-            }
-            if (odds.has("fractional")) {
-                oddsFractional = odds.get("fractional").asText();
-            }
-            if (odds.has("american")) {
-                oddsAmerican = odds.get("american").asText();
-            }
+        // BetMGM stores odds as integer * 1000 (e.g., 2380 → 2.38)
+        if (outcome.has("odds") && outcome.get("odds").isInt()) {
+            int oddsInt = outcome.get("odds").asInt();
+            oddsDecimal = new BigDecimal(oddsInt).divide(new BigDecimal(1000), 4, java.math.RoundingMode.HALF_UP);
         }
         
-        // Try oddsDecimal directly
-        if (oddsDecimal == null && outcome.has("oddsDecimal")) {
-            oddsDecimal = new BigDecimal(outcome.get("oddsDecimal").asText());
+        // Get fractional and American odds if available
+        if (outcome.has("oddsFractional")) {
+            oddsFractional = outcome.get("oddsFractional").asText();
+        }
+        if (outcome.has("oddsAmerican")) {
+            oddsAmerican = String.valueOf(outcome.get("oddsAmerican").asInt());
         }
         
         if (oddsDecimal == null) {
@@ -470,22 +526,35 @@ public class BetMGMScraper implements ScraperGateway {
         
         Price price = new Price();
         price.setDecimal(oddsDecimal);
-        if (oddsFractional != null) {
-            price.setFractional(oddsFractional);
-        }
-        if (oddsAmerican != null) {
-            price.setAmerican(oddsAmerican);
+        price.setFractional(oddsFractional);
+        price.setAmerican(oddsAmerican);
+        
+        // Get changedDate for updatedAt (per mapping doc line 66)
+        Instant updatedAt = Instant.now();
+        if (outcome.has("changedDate")) {
+            try {
+                updatedAt = Instant.parse(outcome.get("changedDate").asText());
+            } catch (Exception e) {
+                // Fall back to current time
+            }
         }
         
         // Create option source data
         OptionSourceData sourceData = new OptionSourceData();
         sourceData.setPagamentoAntecipado(false);
         sourceData.setCapturedAt(Instant.now());
-        sourceData.setUpdatedAt(Instant.now());
+        sourceData.setUpdatedAt(updatedAt);
         sourceData.setStatusRaw(outcome.has("status") ? outcome.get("status").asText() : "");
-        sourceData.setMarketId(outcome.has("betOfferId") ? outcome.get("betOfferId").asText() : "");
-        sourceData.setOptionId(outcome.has("id") ? outcome.get("id").asText() : "");
+        sourceData.setMarketId(outcome.has("betOfferId") ? String.valueOf(outcome.get("betOfferId").asLong()) : "");
+        sourceData.setOptionId(outcome.has("id") ? String.valueOf(outcome.get("id").asLong()) : "");
         sourceData.setPrice(price);
+        
+        // Store metadata (cashOutStatus, criterion, betOfferType) per mapping doc line 166-168
+        Map<String, Object> meta = new HashMap<>();
+        if (outcome.has("cashOutStatus")) {
+            meta.put("cashOutStatus", outcome.get("cashOutStatus").asText());
+        }
+        sourceData.setMeta(meta);
         
         // Create unified option
         UnifiedMarketOption option = new UnifiedMarketOption();

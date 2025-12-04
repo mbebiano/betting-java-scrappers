@@ -229,6 +229,7 @@ public class BetMGMMarketMapper {
 
     /**
      * Maps BetMGM outcome label to canonical outcome type.
+     * Per mapping doc, should use outcome.type (e.g., OT_OVER, OT_UNDER) when available.
      */
     public static OutcomeType mapOutcome(String label, String criterionLabel, MarketType marketType) {
         if (label == null || label.isEmpty()) {
@@ -283,14 +284,17 @@ public class BetMGMMarketMapper {
             }
         }
         
-        // For Over/Under markets
+        // For Over/Under markets (check label for "over", "under", "mais", "menos")
+        // Per mapping doc line 135-144, can check type OT_OVER or OT_UNDER
         if (marketType == MarketType.TOTAL_GOLS_OVER_UNDER ||
             marketType == MarketType.TOTAL_ESCANTEIOS_OVER_UNDER ||
             marketType == MarketType.TOTAL_CARTOES_OVER_UNDER) {
-            if (labelLower.contains("over") || labelLower.contains("mais") || labelLower.contains("acima")) {
+            if (labelLower.contains("over") || labelLower.contains("mais") || labelLower.contains("acima") ||
+                labelLower.contains("ot_over")) {
                 return OutcomeType.OVER;
             }
-            if (labelLower.contains("under") || labelLower.contains("menos") || labelLower.contains("abaixo")) {
+            if (labelLower.contains("under") || labelLower.contains("menos") || labelLower.contains("abaixo") ||
+                labelLower.contains("ot_under")) {
                 return OutcomeType.UNDER;
             }
         }
